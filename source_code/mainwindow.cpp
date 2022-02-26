@@ -17,12 +17,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-//    signup_page signup;
-//    signup.setModal(true);
-//    signup.exec();
     signup = new signup_page(this);
     signup -> show();
-
-
 }
 

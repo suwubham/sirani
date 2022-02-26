@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>signup_page</class>
  <widget class="QDialog" name="signup_page">
@@ -5,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>1136</width>
+    <height>728</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Signup to sirani</string>
   </property>
  </widget>
  <resources/>
