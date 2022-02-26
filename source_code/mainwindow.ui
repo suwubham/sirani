@@ -59,7 +59,7 @@ Padding: 10px</string>
       <string>Email</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="button_login">
      <property name="geometry">
       <rect>
        <x>330</x>
@@ -79,26 +79,6 @@ background-color: rgb(53, 144, 40);</string>
      </property>
      <property name="text">
       <string>Login</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_4">
-     <property name="geometry">
-      <rect>
-       <x>400</x>
-       <y>600</y>
-       <width>211</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 600 12pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
-     </property>
-     <property name="text">
-      <string>Create your account →</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_5">
@@ -192,36 +172,37 @@ Padding: 10px</string>
       <string>Password</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_3">
+    <widget class="QPushButton" name="pushButton">
      <property name="geometry">
       <rect>
-       <x>350</x>
-       <y>560</y>
-       <width>271</width>
-       <height>31</height>
+       <x>380</x>
+       <y>600</y>
+       <width>231</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="cursor">
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 600 12pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
+      <string notr="true">font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+opacity: 0;
+color: rgb(0, 0, 0);</string>
      </property>
      <property name="text">
-      <string>Forgot Password?</string>
+      <string>Create your account →</string>
      </property>
     </widget>
     <zorder>label_2</zorder>
     <zorder>label</zorder>
     <zorder>label_5</zorder>
     <zorder>lineEdit</zorder>
-    <zorder>pushButton</zorder>
+    <zorder>button_login</zorder>
     <zorder>label_7</zorder>
     <zorder>lineEdit_2</zorder>
-    <zorder>label_3</zorder>
-    <zorder>label_4</zorder>
     <zorder>label_6</zorder>
+    <zorder>pushButton</zorder>
    </widget>
   </widget>
  </widget>
