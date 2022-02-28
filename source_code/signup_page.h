@@ -2,9 +2,11 @@
 #define SIGNUP_PAGE_H
 
 #include <QDialog>
+
 #include<QtSql>
 #include <QDebug>
 #include <QFileInfo>
+
 
 namespace Ui {
 class signup_page;
