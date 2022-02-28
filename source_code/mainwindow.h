@@ -2,7 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include<QtSql>
+#include <QDebug>
+#include <QFileInfo>
 #include "signup_page.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
