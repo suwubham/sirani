@@ -7,6 +7,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    QSqlDatabase auth=QSqlDatabase::addDatabase("QSQLITE");
+    auth.setDatabaseName("C:/Users/shubh/Desktop/logindetails.db");
+    if(!auth.open())
+        ui->label_3->setText("Failed");
+    else
+        ui->label_3->setText("Connected");
 }
 
 MainWindow::~MainWindow()
