@@ -6,7 +6,7 @@
 #include <QDebug>
 #include <QFileInfo>
 #include "signup_page.h"
-
+#include "homescreen.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,8 +23,12 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_button_login_clicked();
+
 private:
     Ui::MainWindow *ui;
     signup_page *signup;
+    homescreen *home;
+    QSqlDatabase auth;
 };
 #endif // MAINWINDOW_H
