@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     QSqlDatabase auth=QSqlDatabase::addDatabase("QSQLITE");
-    auth.setDatabaseName("C:/Users/shubh/Desktop/logindetails.db");
+    auth.setDatabaseName("D:/Bachelors/1st Year/Y1S2/semester project/logindetails.db");
     if(!auth.open())
         ui->label_3->setText("Failed");
     else
