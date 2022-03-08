@@ -5,6 +5,7 @@
 #include<QtSql>
 #include <QDebug>
 #include <QFileInfo>
+#include "connection.h"
 
 namespace Ui {
 class homescreen;

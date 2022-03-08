@@ -6,6 +6,10 @@ signup_page::signup_page(QWidget *parent) :
     ui(new Ui::signup_page)
 {
     ui->setupUi(this);
+    if(!connOpen())
+        ui->label_3->setText("Failed");
+    else
+        ui->label_3->setText("Connected");
 }
 
 signup_page::~signup_page()

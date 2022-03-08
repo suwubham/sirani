@@ -216,6 +216,19 @@ background-color: rgb(53, 144, 40);</string>
     <string>Sign Up</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>100</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
   <zorder>label_2</zorder>
   <zorder>label</zorder>
   <zorder>lineEdit_2</zorder>
@@ -227,6 +240,7 @@ background-color: rgb(53, 144, 40);</string>
   <zorder>label_6</zorder>
   <zorder>label_7</zorder>
   <zorder>button_signup</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources/>
  <connections/>

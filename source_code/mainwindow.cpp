@@ -7,9 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QSqlDatabase auth=QSqlDatabase::addDatabase("QSQLITE");
-    auth.setDatabaseName("C:/Users/shubh/Desktop/logindetails.db");
-    if(!auth.open())
+    if(!connOpen())
         ui->label_3->setText("Failed");
     else
         ui->label_3->setText("Connected");
@@ -33,14 +31,16 @@ void MainWindow::on_button_login_clicked()
     QString email, password;
     email = ui -> lineEdit -> text();
     password = ui -> lineEdit_2 -> text();
-
+    connOpen();
     QSqlQuery qry;
-    if (qry.exec("select * from login where email='"+email+"' and password='"+password+"'")){
+    qry.prepare("select * from login where email='"+email+"' and password='"+password+"'");
+    if (qry.exec()){
         int count = 0;
         while (qry.next()){
             count = count + 1;
         }
         if (count == 1){
+            connClose();
             home = new homescreen(this);
             home -> show();
         }
