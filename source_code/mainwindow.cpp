@@ -41,7 +41,6 @@ void MainWindow::on_button_login_clicked()
             count = count + 1;
         }
         if (count == 1){
-            ui -> label_3 -> setText("wow");
             home = new homescreen(this);
             home -> show();
         }
@@ -49,7 +48,5 @@ void MainWindow::on_button_login_clicked()
             QMessageBox::information(this,"Message","Invalid email or password",QMessageBox::Ok);
         }
     }
-
-
 }
 

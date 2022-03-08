@@ -20,6 +20,8 @@ public:
     explicit signup_page(QWidget *parent = nullptr);
     ~signup_page();
 
+private slots:
+
 private:
     Ui::signup_page *ui;
 };
