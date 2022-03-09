@@ -7,6 +7,7 @@
 #include <QFileInfo>
 #include "signup_page.h"
 #include "homescreen.h"
+#include "connection.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +30,6 @@ private:
     Ui::MainWindow *ui;
     signup_page *signup;
     homescreen *home;
-    QSqlDatabase auth;
+
 };
 #endif // MAINWINDOW_H
