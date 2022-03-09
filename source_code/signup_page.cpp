@@ -1,6 +1,6 @@
 #include "signup_page.h"
 #include "ui_signup_page.h"
-
+#include <QMessageBox>
 signup_page::signup_page(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::signup_page)
@@ -16,3 +16,31 @@ signup_page::~signup_page()
 {
     delete ui;
 }
+
+void signup_page::on_button_signup_clicked()
+{
+    User u1;
+    u1.first_name = ui -> lineEdit_firstname -> text();
+    u1.last_name = ui -> lineEdit_lastname -> text();
+    u1.username = ui -> lineEdit_username -> text();
+    u1.email = ui -> lineEdit_email -> text();
+    u1.password = ui -> lineEdit_password -> text();
+    connOpen();
+    QSqlQuery qry;
+    qry.prepare("INSERT INTO userdetails (first_name, last_name, user_name, email, password) VALUES (:fname, :lname, :username, :email, :password)");
+    qry.bindValue(":fname", u1.first_name);
+    qry.bindValue(":lname", u1.last_name);
+    qry.bindValue(":username", u1.username);
+    qry.bindValue(":email", u1.email);
+    qry.bindValue(":password", u1.password);
+
+    if (qry.exec()){
+        QMessageBox::information(this,"Message","Signed Up Successfully",QMessageBox::Ok);
+        connClose();
+    }
+    else{
+        QMessageBox::critical(this,"Message",tr("error::"),qry.lastError().text());
+    }
+
+}
+

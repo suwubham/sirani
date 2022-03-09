@@ -18,22 +18,20 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::on_pushButton_clicked()
 {
     signup = new signup_page(this);
     signup -> show();
 }
 
-
 void MainWindow::on_button_login_clicked()
 {
-    QString email, password;
-    email = ui -> lineEdit -> text();
-    password = ui -> lineEdit_2 -> text();
+    User u1;
+    u1.email = ui -> lineEdit -> text();
+    u1.password = ui -> lineEdit_2 -> text();
     connOpen();
     QSqlQuery qry;
-    qry.prepare("select * from login where email='"+email+"' and password='"+password+"'");
+    qry.prepare("select * from userdetails where email='"+u1.email+"' and password='"+u1.password+"'");
     if (qry.exec()){
         int count = 0;
         while (qry.next()){
@@ -45,6 +43,7 @@ void MainWindow::on_button_login_clicked()
             home -> show();
         }
         else{
+            connClose();
             QMessageBox::information(this,"Message","Invalid email or password",QMessageBox::Ok);
         }
     }

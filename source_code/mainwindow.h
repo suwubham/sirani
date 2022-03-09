@@ -8,6 +8,7 @@
 #include "signup_page.h"
 #include "homescreen.h"
 #include "connection.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

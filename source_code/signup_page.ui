@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1662</width>
-    <height>896</height>
+    <width>1472</width>
+    <height>894</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,9 +32,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>60</y>
-     <width>1411</width>
+     <x>80</x>
+     <y>50</y>
+     <width>1371</width>
      <height>791</height>
     </rect>
    </property>
@@ -50,7 +50,7 @@ border-radius: 20px;</string>
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>190</y>
+     <y>150</y>
      <width>311</width>
      <height>81</height>
     </rect>
@@ -67,7 +67,7 @@ color: rgb(31, 31, 31)</string>
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>260</y>
+     <y>220</y>
      <width>311</width>
      <height>81</height>
     </rect>
@@ -86,7 +86,7 @@ color: rgb(31, 31, 31)</string>
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>100</y>
+     <y>60</y>
      <width>311</width>
      <height>111</height>
     </rect>
@@ -99,11 +99,11 @@ color: rgb(31, 31, 31)</string>
     <string>Sirani</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_firstname">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>360</y>
+     <y>320</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -118,11 +118,11 @@ Padding: 10px</string>
     <string>First Name</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_lastname">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>360</y>
+     <y>320</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -137,11 +137,11 @@ Padding: 10px</string>
     <string>Last Name</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="lineEdit_email">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>600</y>
+     <y>560</y>
      <width>511</width>
      <height>61</height>
     </rect>
@@ -156,11 +156,11 @@ Padding: 10px</string>
     <string>Email</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="lineEdit_password">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>710</y>
+     <y>670</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -175,11 +175,11 @@ Padding: 10px</string>
     <string>Password</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="lineEdit_username">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>480</y>
+     <y>440</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -198,7 +198,7 @@ Padding: 10px</string>
    <property name="geometry">
     <rect>
      <x>1110</x>
-     <y>760</y>
+     <y>720</y>
      <width>321</width>
      <height>61</height>
     </rect>
@@ -231,11 +231,11 @@ background-color: rgb(53, 144, 40);</string>
   </widget>
   <zorder>label_2</zorder>
   <zorder>label</zorder>
-  <zorder>lineEdit_2</zorder>
-  <zorder>lineEdit_5</zorder>
-  <zorder>lineEdit_4</zorder>
-  <zorder>lineEdit_3</zorder>
-  <zorder>lineEdit</zorder>
+  <zorder>lineEdit_lastname</zorder>
+  <zorder>lineEdit_username</zorder>
+  <zorder>lineEdit_password</zorder>
+  <zorder>lineEdit_email</zorder>
+  <zorder>lineEdit_firstname</zorder>
   <zorder>label_5</zorder>
   <zorder>label_6</zorder>
   <zorder>label_7</zorder>
