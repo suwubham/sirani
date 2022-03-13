@@ -1,8 +1,10 @@
 #ifndef CONNECTION_H
 #define CONNECTION_H
 #include <QString>
+
 bool connOpen();
 void connClose();
+bool Email_check(QString email);
 class User{
 public:
     QString first_name;
