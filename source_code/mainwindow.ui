@@ -25,14 +25,165 @@
   <property name="windowTitle">
    <string>Log in to Sirani</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QWidget" name="widget" native="true">
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));</string>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
+
+border-radius: 20px;
+
+margin-top: 50px;
+margin-bottom: 50px;
+padding: 0px;
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+padding: 0px;
+margin: 0px;
+background: transparent;
+</string>
+         </property>
+         <property name="text">
+          <string>Sirani</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+margin: 0px;
+background: transparent;
+padding: 0px;</string>
+         </property>
+         <property name="text">
+          <string>Your therapy buddy</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+margin: 0px;
+padding: 0px;
+background: transparent;
+</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="styleSheet">
+          <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+background-color: rgb(181, 181, 181);
+padding: 10px;
+margin: 0px;
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Email</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="styleSheet">
+          <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+background-color: rgb(181, 181, 181);
+Padding: 10px;
+margin: 0px;
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(255, 255, 255);
+border-radius: 20px;
+background-color: rgb(53, 144, 40);
+</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+background: transparent;
+color: rgb(0, 0, 0);
+margin: 0px;
+
+</string>
+         </property>
+         <property name="text">
+          <string>Click here to sign up</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
     </item>
    </layout>
   </widget>
