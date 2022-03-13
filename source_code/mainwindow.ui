@@ -12,14 +12,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>964</width>
-    <height>731</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>964</width>
-    <height>731</height>
+    <width>10000</width>
+    <height>10000</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -61,70 +61,8 @@ padding: 0px;
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="styleSheet">
-          <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31);
-padding: 0px;
-margin: 0px;
-background: transparent;
-</string>
-         </property>
-         <property name="text">
-          <string>Sirani</string>
-         </property>
-        </widget>
-       </item>
-       <item alignment="Qt::AlignLeft">
-        <widget class="QLabel" name="label_2">
-         <property name="styleSheet">
-          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31);
-margin: 0px;
-background: transparent;
-padding: 0px;</string>
-         </property>
-         <property name="text">
-          <string>Your therapy buddy</string>
-         </property>
-        </widget>
-       </item>
-       <item alignment="Qt::AlignLeft">
-        <widget class="QLabel" name="label_3">
-         <property name="styleSheet">
-          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31);
-margin: 0px;
-padding: 0px;
-background: transparent;
-</string>
-         </property>
-         <property name="text">
-          <string>Login</string>
-         </property>
-        </widget>
-       </item>
-       <item alignment="Qt::AlignLeft">
-        <widget class="QLineEdit" name="lineEdit">
-         <property name="styleSheet">
-          <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-padding: 10px;
-margin: 0px;
-</string>
-         </property>
-         <property name="placeholderText">
-          <string>Email</string>
-         </property>
-        </widget>
-       </item>
-       <item alignment="Qt::AlignLeft">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="4" column="0">
         <widget class="QLineEdit" name="lineEdit_2">
          <property name="styleSheet">
           <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
@@ -139,13 +77,28 @@ margin: 0px;
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QPushButton" name="pushButton">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
          <property name="styleSheet">
-          <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(255, 255, 255);
-border-radius: 20px;
-background-color: rgb(53, 144, 40);
+          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+margin: 0px;
+background: transparent;
+padding: 0px;</string>
+         </property>
+         <property name="text">
+          <string>Your therapy buddy</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+margin: 0px;
+padding: 0px;
+background: transparent;
 </string>
          </property>
          <property name="text">
@@ -153,8 +106,77 @@ background-color: rgb(53, 144, 40);
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+padding: 0px;
+margin: 0px;
+background: transparent;
+</string>
+         </property>
+         <property name="text">
+          <string>Sirani</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="styleSheet">
+          <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+background-color: rgb(181, 181, 181);
+padding: 10px;
+margin: 0px;
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Email</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="button_login">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(255, 255, 255);
+border-radius: 20px;
+background-color: rgb(53, 144, 40);
+margin: 20px;
+padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">margin:0px;
+padding: 0px;
+background:  transparent;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="pushButton">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true">font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
 border-radius: 20px;
