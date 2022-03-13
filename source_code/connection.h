@@ -5,6 +5,8 @@
 bool connOpen();
 void connClose();
 bool Email_check(QString email);
+bool pw_check(QString pw);
+
 class User{
 public:
     QString first_name;

@@ -29,6 +29,11 @@ void signup_page::on_button_signup_clicked()
     if (Email_check(u1.email)){
         QMessageBox::information(this,"Message","Invalid email",QMessageBox::Ok);
     }
+
+    else if (pw_check(u1.password)){
+        QMessageBox::information(this,"Message","Password must contain at least eight characters, at least one uppercase letter, "
+                                                "one lowercase letter, one number and one special character",QMessageBox::Ok);
+    }
     else{
     QSqlQuery qry,qry1;
     int count = 0;
