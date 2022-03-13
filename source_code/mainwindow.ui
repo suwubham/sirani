@@ -12,224 +12,202 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>964</width>
-    <height>731</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>964</width>
-    <height>731</height>
+    <width>10000</width>
+    <height>10000</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>Sirani</string>
+   <string>Log in to Sirani</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="widget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>971</width>
-      <height>731</height>
-     </rect>
-    </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>40</y>
-       <width>351</width>
-       <height>631</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
-border-radius: 20px;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>290</y>
-       <width>321</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
+
+border-radius: 20px;
+
+margin-top: 50px;
+margin-bottom: 50px;
+padding: 0px;
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="4" column="0">
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="styleSheet">
+          <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
 border-radius: 20px;
 background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-     </property>
-     <property name="placeholderText">
-      <string>Email</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="button_login">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>480</y>
-       <width>321</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
+Padding: 10px;
+margin: 0px;
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Password</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+margin: 0px;
+background: transparent;
+padding: 0px;</string>
+         </property>
+         <property name="text">
+          <string>Your therapy buddy</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+margin: 0px;
+padding: 0px;
+background: transparent;
+</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+padding: 0px;
+margin: 0px;
+background: transparent;
+</string>
+         </property>
+         <property name="text">
+          <string>Sirani</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="styleSheet">
+          <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+background-color: rgb(181, 181, 181);
+padding: 10px;
+margin: 0px;
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>Email</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="button_login">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
 color: rgb(255, 255, 255);
 border-radius: 20px;
-background-color: rgb(53, 144, 40);</string>
-     </property>
-     <property name="text">
-      <string>Login</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>60</y>
-       <width>311</width>
-       <height>111</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
-     </property>
-     <property name="text">
-      <string>Sirani</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>150</y>
-       <width>311</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
-     </property>
-     <property name="text">
-      <string>Your therapy buddy</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>220</y>
-       <width>311</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-font: 600 25pt &quot;Segoe UI Variable Text Semibold&quot;;
-text-decoration: underline;
-color: rgb(31, 31, 31)</string>
-     </property>
-     <property name="text">
-      <string>Log in </string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>-60</x>
-       <y>0</y>
-       <width>1191</width>
-       <height>781</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));</string>
-     </property>
-     <property name="text">
-      <string>TextLabel</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
-     <property name="geometry">
-      <rect>
-       <x>330</x>
-       <y>380</y>
-       <width>321</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+background-color: rgb(53, 144, 40);
+margin: 20px;
+padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">margin:0px;
+padding: 0px;
+background:  transparent;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QPushButton" name="pushButton">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
 border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-     </property>
-     <property name="placeholderText">
-      <string>Password</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>590</y>
-       <width>231</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-opacity: 0;
-color: rgb(0, 0, 0);</string>
-     </property>
-     <property name="text">
-      <string>Create your account →</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>430</x>
-       <y>679</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <zorder>label_2</zorder>
-    <zorder>label</zorder>
-    <zorder>label_5</zorder>
-    <zorder>lineEdit</zorder>
-    <zorder>button_login</zorder>
-    <zorder>label_7</zorder>
-    <zorder>lineEdit_2</zorder>
-    <zorder>label_6</zorder>
-    <zorder>pushButton</zorder>
-    <zorder>label_3</zorder>
-   </widget>
+background: transparent;
+color: rgb(0, 0, 0);
+margin: 0px;
+
+</string>
+         </property>
+         <property name="text">
+          <string>Click here to sign up</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
