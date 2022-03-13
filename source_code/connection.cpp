@@ -8,7 +8,7 @@ QSqlDatabase auth;
 
 bool connOpen(){
     QSqlDatabase auth=QSqlDatabase::addDatabase("QSQLITE");
-    auth.setDatabaseName("C:/Users/shubh/Desktop/sirani/sirani.db");
+    auth.setDatabaseName("D:/Bachelors/1st Year/Y1S2/semester project/sirani/sirani.db");
     if(!auth.open()){
         qDebug()<<("Failed");
         return false;
@@ -36,6 +36,17 @@ bool Email_check(QString email)
     }
 }
 
+bool pw_check(QString pw)
+{
+    QRegularExpression regex ("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
+    if(!regex.match(pw).hasMatch())
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
 
 
