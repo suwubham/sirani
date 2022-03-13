@@ -26,36 +26,39 @@ void signup_page::on_button_signup_clicked()
     u1.email = ui -> lineEdit_email -> text();
     u1.password = ui -> lineEdit_password -> text();
     connOpen();
-    QSqlQuery qry,qry1;
-    qry1.prepare("select * from userdetails where username='"+u1.username+"'");
-    if (qry1.exec()){
-        int count = 0;
-        while (qry.next()){
-            count = count + 1;
-        }
-
-        if (count == 0){
-            qry.prepare("INSERT INTO userdetails (first_name, last_name, user_name,"
-                        " email, password) VALUES (:fname, :lname, :username, :email, :password)");
-            qry.bindValue(":fname", u1.first_name);
-            qry.bindValue(":lname", u1.last_name);
-            qry.bindValue(":username", u1.username);
-            qry.bindValue(":email", u1.email);
-            qry.bindValue(":password", u1.password);
-
-            if (qry.exec()){
-                QMessageBox::information(this,"Message","Signed Up Successfully",QMessageBox::Ok);
-                connClose();
-            }
-        }
-            else{
-                QMessageBox::critical(this,"Message",tr("error::"),qry.lastError().text());
-            }
+    if (Email_check(u1.email)){
+        QMessageBox::information(this,"Message","Invalid email",QMessageBox::Ok);
     }
-        else{
-            connClose();
-            QMessageBox::information(this,"Message","Username already taken",QMessageBox::Ok);
-        }
-}
 
+    else if (pw_check(u1.password)){
+        QMessageBox::information(this,"Message","Password must contain at least eight characters, at least one uppercase letter, "
+                                                "one lowercase letter, one number and one special character",QMessageBox::Ok);
+    }
+    else{
+    QSqlQuery qry,qry1;
+    int count = 0;
+    qry1.prepare("select * from userdetails where user_name='"+u1.username+"'");
+    qry1.exec();
+    while (qry1.next()){
+            count = count + 1;
+    }
+    if (count != 0){
+        connClose();
+        QMessageBox::information(this,"Message","Username already taken",QMessageBox::Ok);
+    }
+
+    if (count == 0){
+        qry.prepare("INSERT INTO userdetails (first_name, last_name, user_name,"
+                    "email, password) VALUES (:fname, :lname, :username, :email, :password)");
+        qry.bindValue(":fname", u1.first_name);
+        qry.bindValue(":lname", u1.last_name);
+        qry.bindValue(":username", u1.username);
+        qry.bindValue(":email", u1.email);
+        qry.bindValue(":password", u1.password);
+        qry.exec();
+        QMessageBox::information(this,"Message","Signed Up Successfully",QMessageBox::Ok);
+        connClose();
+    }
+    }
+}
 
