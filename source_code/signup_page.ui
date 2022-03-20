@@ -6,241 +6,244 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1472</width>
-    <height>894</height>
+    <width>1221</width>
+    <height>740</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Signup to sirani</string>
   </property>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>-50</x>
-     <y>-20</y>
-     <width>1741</width>
-     <height>1001</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>50</y>
-     <width>1371</width>
-     <height>791</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
-border-radius: 20px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>150</y>
-     <width>311</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
-   </property>
-   <property name="text">
-    <string>Your therapy buddy</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>220</y>
-     <width>311</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
+border-radius: 20px;
+
+QLineEdit{
+	border: 20px solid rgb(37,29,48);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="styleSheet">
+         <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+background: transparent;
+</string>
+        </property>
+        <property name="text">
+         <string>Sirani</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="styleSheet">
+         <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+background: transparent;</string>
+        </property>
+        <property name="text">
+         <string>Your therapy buddy</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
 font: 600 25pt &quot;Segoe UI Variable Text Semibold&quot;;
 text-decoration: underline;
 color: rgb(31, 31, 31)</string>
-   </property>
-   <property name="text">
-    <string>Sign Up</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>60</y>
-     <width>311</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
-   </property>
-   <property name="text">
-    <string>Sirani</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_firstname">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>320</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+        </property>
+        <property name="text">
+         <string>Sign Up</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="verticalSpacing">
+         <number>20</number>
+        </property>
+        <item row="3" column="2">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="lineEdit_firstname">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit{
+font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+background-color: rgb(181, 181, 181);
+Padding: 10px;
+}
+QLineEdit:hover{
+border: 5px solid qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));;
+}</string>
+          </property>
+          <property name="placeholderText">
+           <string>First Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLineEdit" name="lineEdit_lastname">
+          <property name="styleSheet">
+           <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
 border-radius: 20px;
 background-color: rgb(181, 181, 181);
 Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>First Name</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_lastname">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>320</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+          </property>
+          <property name="placeholderText">
+           <string>Last Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLineEdit" name="lineEdit_password">
+          <property name="styleSheet">
+           <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
 border-radius: 20px;
 background-color: rgb(181, 181, 181);
 Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Last Name</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_email">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>560</y>
-     <width>511</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+          </property>
+          <property name="placeholderText">
+           <string>Password</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="lineEdit_username">
+          <property name="styleSheet">
+           <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
+border-radius: 20px;
+background-color: rgb(181, 181, 181);
+Padding: 10px;
+</string>
+          </property>
+          <property name="placeholderText">
+           <string>Username</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_email">
+          <property name="styleSheet">
+           <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
 border-radius: 20px;
 background-color: rgb(181, 181, 181);
 Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Email</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_password">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>670</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Password</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_username">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>440</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Username</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button_signup">
-   <property name="geometry">
-    <rect>
-     <x>1110</x>
-     <y>720</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="cursor">
-    <cursorShape>PointingHandCursor</cursorShape>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
+          </property>
+          <property name="placeholderText">
+           <string>Email</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_signup">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
 color: rgb(255, 255, 255);
 border-radius: 20px;
-background-color: rgb(53, 144, 40);</string>
-   </property>
-   <property name="text">
-    <string>Sign Up</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>100</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <zorder>label_2</zorder>
-  <zorder>label</zorder>
-  <zorder>lineEdit_lastname</zorder>
-  <zorder>lineEdit_username</zorder>
-  <zorder>lineEdit_password</zorder>
-  <zorder>lineEdit_email</zorder>
-  <zorder>lineEdit_firstname</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_6</zorder>
-  <zorder>label_7</zorder>
-  <zorder>button_signup</zorder>
-  <zorder>label_3</zorder>
+background-color: rgb(53, 144, 40);
+margin: 20px;
+padding: 5px;
+</string>
+        </property>
+        <property name="text">
+         <string>Sign Up</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+margin: 0px;
+padding: 0px;</string>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

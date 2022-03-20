@@ -41,6 +41,7 @@ void MainWindow::on_button_login_clicked()
             connClose();
             home = new homescreen(this);
             home -> show();
+            this->hide();
         }
         else{
             connClose();
