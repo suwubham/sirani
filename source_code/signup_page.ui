@@ -6,241 +6,347 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1472</width>
-    <height>894</height>
+    <width>800</width>
+    <height>580</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>580</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Signup to sirani</string>
   </property>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>-50</x>
-     <y>-20</y>
-     <width>1741</width>
-     <height>1001</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>50</y>
-     <width>1371</width>
-     <height>791</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
-border-radius: 20px;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>150</y>
-     <width>311</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 20pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
-   </property>
-   <property name="text">
-    <string>Your therapy buddy</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>220</y>
-     <width>311</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-font: 600 25pt &quot;Segoe UI Variable Text Semibold&quot;;
-text-decoration: underline;
-color: rgb(31, 31, 31)</string>
-   </property>
-   <property name="text">
-    <string>Sign Up</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>60</y>
-     <width>311</width>
-     <height>111</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(31, 31, 31)</string>
-   </property>
-   <property name="text">
-    <string>Sirani</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_firstname">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>320</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>First Name</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_lastname">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>320</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Last Name</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_email">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>560</y>
-     <width>511</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Email</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_password">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>670</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Password</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_username">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>440</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 600 14pt &quot;Segoe UI Variable Text Semibold&quot;;
-border-radius: 20px;
-background-color: rgb(181, 181, 181);
-Padding: 10px</string>
-   </property>
-   <property name="placeholderText">
-    <string>Username</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button_signup">
-   <property name="geometry">
-    <rect>
-     <x>1110</x>
-     <y>720</y>
-     <width>321</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="cursor">
-    <cursorShape>PointingHandCursor</cursorShape>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 1000 18pt &quot;Segoe UI Variable Text Semibold&quot;;
-color: rgb(255, 255, 255);
-border-radius: 20px;
-background-color: rgb(53, 144, 40);</string>
-   </property>
-   <property name="text">
-    <string>Sign Up</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>100</y>
-     <width>91</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>TextLabel</string>
-   </property>
-  </widget>
-  <zorder>label_2</zorder>
-  <zorder>label</zorder>
-  <zorder>lineEdit_lastname</zorder>
-  <zorder>lineEdit_username</zorder>
-  <zorder>lineEdit_password</zorder>
-  <zorder>lineEdit_email</zorder>
-  <zorder>lineEdit_firstname</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_6</zorder>
-  <zorder>label_7</zorder>
-  <zorder>button_signup</zorder>
-  <zorder>label_3</zorder>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/IMG/signup-02.png);
+background-repeat: repeat-y;
+
+
+background-color: #FEFAF1;</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QFrame" name="frame_2">
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>335</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>60</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0" colspan="2">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>45</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLabel" name="label">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>45</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 600 25pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;
+color: #FF6768;
+background: transparent ;
+</string>
+        </property>
+        <property name="text">
+         <string>Sign Up</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Foco&quot;;
+color: #3C465F;</string>
+        </property>
+        <property name="text">
+         <string>First Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="label_6">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Foco&quot;;
+color: #3C465F;</string>
+        </property>
+        <property name="text">
+         <string>Last Name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLineEdit" name="lineEdit_firstname">
+        <property name="minimumSize">
+         <size>
+          <width>158</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-width: 1px;
+     border-style: solid;
+     border-color: #898479;
+border-radius: 4px;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLineEdit" name="lineEdit_lastname">
+        <property name="minimumSize">
+         <size>
+          <width>158</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-width: 1px;
+     border-style: solid;
+     border-color: #898479;
+border-radius: 4px;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="2">
+       <widget class="QLabel" name="label_7">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Foco&quot;;
+color: #3C465F;</string>
+        </property>
+        <property name="text">
+         <string>Username</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QLineEdit" name="lineEdit_username">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-width: 1px;
+     border-style: solid;
+     border-color: #898479;
+border-radius: 4px;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <widget class="QLabel" name="label_4">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Foco&quot;;
+color: #3C465F;</string>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <widget class="QLineEdit" name="lineEdit_email">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-width: 1px;
+     border-style: solid;
+     border-color: #898479;
+border-radius: 4px;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QLabel" name="label_5">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Foco&quot;;
+color: #3C465F;</string>
+        </property>
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0" colspan="2">
+       <widget class="QLineEdit" name="lineEdit_password">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>35</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-width: 1px;
+     border-style: solid;
+     border-color: #898479;
+border-radius: 4px;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0" colspan="2">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>25</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="12" column="0" colspan="2">
+       <widget class="QPushButton" name="button_signup">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>37</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#button_signup{background-color: #FF6768;
+font: 12pt &quot;Foco&quot;;
+color: #FEFAF1;
+border-radius:4px}
+#button_signup:hover{background-color: #FFB391;
+color: #FEFAF1;}</string>
+        </property>
+        <property name="text">
+         <string>Create Account</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0" colspan="2">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>30</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="14" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <pointsize>7</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>30</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
