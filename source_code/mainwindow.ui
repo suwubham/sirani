@@ -41,7 +41,7 @@ background-image: url(:/IMG/bg-01.png);
 background-color: #FEFAF1;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="11,12,13">
     <item>
      <widget class="QFrame" name="frame_2">
       <property name="styleSheet">
@@ -229,11 +229,12 @@ color: #3C465F;</string>
            <height>35</height>
           </size>
          </property>
-         <property name="styleSheet">
+
           <string notr="true">border-width: 1px;
      border-style: solid;
      border-color: #898479;
 border-radius: 4px;</string>
+
          </property>
          <property name="echoMode">
           <enum>QLineEdit::Password</enum>

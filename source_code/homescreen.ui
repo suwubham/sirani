@@ -13,18 +13,174 @@
   <property name="windowTitle">
    <string>Sirani</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>25</height>
-    </rect>
-   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0 rgba(255, 122, 0, 255), stop:0.976526 rgba(109, 255, 255, 255));
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,5">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
+border-radius: 20px;
+padding: 20px</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.991, y2:0.920455, stop:0 rgba(255, 0, 185, 255), stop:1 rgba(140, 255, 255, 255));
+font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Home</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.991, y2:0.920455, stop:0 rgba(255, 0, 185, 255), stop:1 rgba(140, 255, 255, 255));
+font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Reminderes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.991, y2:0.920455, stop:0 rgba(255, 0, 185, 255), stop:1 rgba(140, 255, 255, 255));
+font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Planner</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0.991, y2:0.920455, stop:0 rgba(255, 0, 185, 255), stop:1 rgba(140, 255, 255, 255));
+font: 1000 12pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>Resources</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0.966, x2:1, y2:0, stop:0#CCFFFF, stop:0.976526#FFCCCC);
+border-radius: 50px;</string>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="Home">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>11</y>
+          <width>296</width>
+          <height>144</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+background: transparent;
+</string>
+        </property>
+        <property name="text">
+         <string>Home</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Reminders">
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>521</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+background: transparent;
+</string>
+        </property>
+        <property name="text">
+         <string>Reminders</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Planner">
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-20</y>
+          <width>431</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+background: transparent;
+</string>
+        </property>
+        <property name="text">
+         <string>Planner</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Resorces">
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>511</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 600 65pt &quot;Segoe UI Variable Text Semibold&quot;;
+color: rgb(31, 31, 31);
+background: transparent;
+</string>
+        </property>
+        <property name="text">
+         <string>Resources</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
