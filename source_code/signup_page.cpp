@@ -1,6 +1,8 @@
 #include "signup_page.h"
 #include "ui_signup_page.h"
 #include <QMessageBox>
+#include "connection.h"
+
 signup_page::signup_page(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::signup_page)
@@ -16,6 +18,31 @@ signup_page::~signup_page()
 {
     delete ui;
 }
+
+bool signup_page::Email_check(QString email)
+{
+    QRegularExpression regex ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+    if(!regex.match(email).hasMatch())
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+bool signup_page::pw_check(QString pw)
+{
+    QRegularExpression regex ("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
+    if(!regex.match(pw).hasMatch())
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 
 void signup_page::on_button_signup_clicked()
 {
