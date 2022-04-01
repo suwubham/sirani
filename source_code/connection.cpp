@@ -23,7 +23,3 @@ void connClose(){
     auth.close();
     auth.removeDatabase(QSqlDatabase::defaultConnection);
 }
-
-
-
-
