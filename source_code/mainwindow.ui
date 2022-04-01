@@ -35,10 +35,11 @@
    <string>Sirani</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-repeat: repeat-y;
+   <string notr="true">#centralwidget{
+background-repeat: repeat-y;
 background-image: url(:/IMG/bg-01.png);
-
-background-color: #FEFAF1;</string>
+background-color: #FEFAF1;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">

@@ -13,18 +13,151 @@
   <property name="windowTitle">
    <string>Sirani</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>25</height>
-    </rect>
-   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="8,20">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Dashboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="text">
+          <string>Goals</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Sleep Tracker</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Mood Tracker</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>Resources</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <widget class="QWidget" name="Dashboard">
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>221</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Goals">
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>171</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Goals</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Moodtracker">
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>60</y>
+             <width>181</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Mood Tracker</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Sleeptracker">
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>151</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Sleep tracker</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="Resources">
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>50</y>
+             <width>131</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Resources</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

@@ -39,7 +39,7 @@ void MainWindow::on_button_login_clicked()
         }
         if (count == 1){
             connClose();
-            home = new homescreen(this);
+            home = new homescreen();
             home -> show();
         }
         else{
