@@ -267,6 +267,9 @@ color: #3C465F;</string>
      border-color: #898479;
 border-radius: 4px;</string>
         </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
        </widget>
       </item>
       <item row="11" column="0" colspan="2">
