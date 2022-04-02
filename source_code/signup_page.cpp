@@ -19,7 +19,7 @@ signup_page::~signup_page()
     delete ui;
 }
 
-bool signup_page::Email_check(QString email)
+bool User::Email_check(QString email)
 {
     QRegularExpression regex ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
     if(!regex.match(email).hasMatch())
@@ -31,7 +31,7 @@ bool signup_page::Email_check(QString email)
     }
 }
 
-bool signup_page::pw_check(QString pw)
+bool User::pw_check(QString pw)
 {
     QRegularExpression regex ("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
     if(!regex.match(pw).hasMatch())
@@ -46,18 +46,18 @@ bool signup_page::pw_check(QString pw)
 
 void signup_page::on_button_signup_clicked()
 {
-    User u1;
+    User u1,u;
     u1.first_name = ui -> lineEdit_firstname -> text();
     u1.last_name = ui -> lineEdit_lastname -> text();
     u1.username = ui -> lineEdit_username -> text();
     u1.email = ui -> lineEdit_email -> text();
     u1.password = ui -> lineEdit_password -> text();
     connOpen();
-    if (Email_check(u1.email)){
+    if (u.Email_check(u1.email)){
         QMessageBox::information(this,"Message","Invalid email",QMessageBox::Ok);
     }
 
-    else if (pw_check(u1.password)){
+    else if (u.pw_check(u1.password)){
         QMessageBox::information(this,"Message","Password must contain at least eight characters, at least one uppercase letter, "
                                                 "one lowercase letter, one number and one special character",QMessageBox::Ok);
     }

@@ -23,8 +23,8 @@ public:
 private slots:
 
     void on_button_signup_clicked();
-    bool Email_check(QString email);
-    bool pw_check(QString pw);
+
+
 
 private:
     Ui::signup_page *ui;
