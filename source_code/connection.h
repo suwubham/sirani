@@ -13,6 +13,7 @@ public:
     QString email;
     QString password;
     QString username;
+    QString current;
 };
 
 
