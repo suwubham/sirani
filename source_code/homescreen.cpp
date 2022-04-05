@@ -16,13 +16,9 @@ homescreen::homescreen(QWidget *parent) :
 void homescreen :: Date_Time()
 {
 
-    QTime clock = QTime::currentTime();
-    QString clock_text=clock.toString("hh : mm : ss");
+    QDateTime clock = QDateTime::currentDateTime();
+    QString clock_text=clock.toString("ddd MMMM yyyy \n\nh : m : ss ap");
     ui -> Clock -> setText(clock_text);
-
-    QDate date = QDate::currentDate();
-    QString date_text=date.toString();
-    ui -> Date -> setText(date_text);
 }
 
 homescreen::~homescreen()

@@ -27,11 +27,11 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_button_login_clicked()
 {
     User u1;
-    u1.email = ui -> lineEdit -> text();
+    u1.username = ui -> lineEdit -> text();
     u1.password = ui -> lineEdit_2 -> text();
     connOpen();
     QSqlQuery qry;
-    qry.prepare("select * from userdetails where email='"+u1.email+"' and password='"+u1.password+"'");
+    qry.prepare("select * from userdetails where user_name='"+u1.username+"' and password='"+u1.password+"'");
     if (qry.exec()){
         int count = 0;
         while (qry.next()){
@@ -41,10 +41,11 @@ void MainWindow::on_button_login_clicked()
             connClose();
             home = new homescreen();
             home -> show();
+            this -> hide();
         }
         else{
             connClose();
-            QMessageBox::information(this,"Message","Invalid email or password",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","Invalid username or password",QMessageBox::Ok);
         }
     }
 }
