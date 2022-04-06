@@ -268,7 +268,7 @@ color: #3C465F;</string>
 border-radius: 4px;</string>
         </property>
         <property name="echoMode">
-         <enum>QLineEdit::Password</enum>
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
         </property>
        </widget>
       </item>

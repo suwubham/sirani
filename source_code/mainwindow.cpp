@@ -47,10 +47,11 @@ void MainWindow::on_button_login_clicked()
             home = new homescreen();
             home -> show();
             this -> hide();
+            this -> hide();
         }
         else{
             connClose();
-            QMessageBox::information(this,"Message","Invalid email or password",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","Invalid username or password",QMessageBox::Ok);
         }
     }
 }
