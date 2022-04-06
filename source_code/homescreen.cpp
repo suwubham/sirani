@@ -2,6 +2,7 @@
 #include "ui_homescreen.h"
 #include<QTimer>
 #include<QDateTime>
+#include<QMessageBox>
 
 homescreen::homescreen(QWidget *parent) :
     QMainWindow(parent),
@@ -54,7 +55,3 @@ void homescreen::on_pushButton_5_clicked()
 {
     ui -> stackedWidget -> setCurrentIndex(4);
 }
-
-
-
-
