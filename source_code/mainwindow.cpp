@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     if(!connOpen())
         ui->label_3->setText("Failed");
     else
@@ -15,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    QSqlQuery final;
+    final.prepare("delete from current_user");
+    final.exec();
     delete ui;
 }
 
@@ -38,12 +40,14 @@ void MainWindow::on_button_login_clicked()
             count = count + 1;
         }
         if (count == 1){
+            QSqlQuery qry3;
+            qry3.prepare("INSERT INTO current_user (username) VALUES ('"+u1.username+"')");
+            qry3.exec();
             connClose();
             home = new homescreen();
             home -> show();
-
             this -> hide();
-
+            this -> hide();
         }
         else{
             connClose();
