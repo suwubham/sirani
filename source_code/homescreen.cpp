@@ -2,6 +2,7 @@
 #include "ui_homescreen.h"
 #include<QTimer>
 #include<QDateTime>
+#include <QDebug>
 
 homescreen::homescreen(QWidget *parent) :
     QMainWindow(parent),
@@ -11,11 +12,18 @@ homescreen::homescreen(QWidget *parent) :
     QTimer *datetime = new QTimer(this);
     connect(datetime,SIGNAL(timeout()),this,SLOT(Date_Time()));
     datetime -> start();
+
+    connOpen();
+    QSqlQuery qry;
+    qry.prepare("select username from current_user");
+    qry.exec();
+    qry.next();
+    QString wooo = "Welcome, " + qry.value(0).toString();
+    ui -> label_6 -> setText(wooo);
 }
 
 void homescreen :: Date_Time()
 {
-
     QTime clock = QTime::currentTime();
     QString clock_text=clock.toString("hh : mm : ss");
     ui -> Clock -> setText(clock_text);
@@ -27,6 +35,9 @@ void homescreen :: Date_Time()
 
 homescreen::~homescreen()
 {
+    QSqlQuery final;
+    final.prepare("delete from current_user");
+    final.exec();
     delete ui;
 }
 

@@ -110,6 +110,19 @@
             <string>Dashboard</string>
            </property>
           </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>90</y>
+             <width>331</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
          </widget>
          <widget class="QWidget" name="Goals">
           <widget class="QLabel" name="label_2">
