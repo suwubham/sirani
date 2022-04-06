@@ -13,7 +13,11 @@ public:
     QString email;
     QString password;
     QString username;
-    QString current;
+
+public:
+    bool Email_check(QString email);
+    bool pw_check(QString pw);
+
 };
 
 

@@ -41,13 +41,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="Date">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QPushButton" name="pushButton_2">
          <property name="text">
           <string>Dashboard</string>
@@ -96,6 +89,9 @@
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
          <widget class="QWidget" name="Dashboard">
           <widget class="QLabel" name="label">
            <property name="geometry">

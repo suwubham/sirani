@@ -2,6 +2,7 @@
 #include "ui_homescreen.h"
 #include<QTimer>
 #include<QDateTime>
+#include<QMessageBox>
 
 homescreen::homescreen(QWidget *parent) :
     QMainWindow(parent),
@@ -16,13 +17,9 @@ homescreen::homescreen(QWidget *parent) :
 void homescreen :: Date_Time()
 {
 
-    QTime clock = QTime::currentTime();
-    QString clock_text=clock.toString("hh : mm : ss");
+    QDateTime clock = QDateTime::currentDateTime();
+    QString clock_text=clock.toString("ddd MMMM yyyy \n\nh : m : ss ap");
     ui -> Clock -> setText(clock_text);
-
-    QDate date = QDate::currentDate();
-    QString date_text=date.toString();
-    ui -> Date -> setText(date_text);
 }
 
 homescreen::~homescreen()
@@ -58,7 +55,3 @@ void homescreen::on_pushButton_5_clicked()
 {
     ui -> stackedWidget -> setCurrentIndex(4);
 }
-
-
-
-

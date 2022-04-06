@@ -4,6 +4,7 @@
 #include <QFileInfo>
 #include <QRegularExpression>
 #include <stdio.h>
+
 QSqlDatabase auth;
 
 bool connOpen(){
