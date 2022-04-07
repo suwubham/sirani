@@ -86,6 +86,11 @@ homescreen::~homescreen()
     delete ui;
 }
 
+void homescreen::on_pushButton_clicked()
+{
+    ui -> stackedWidget -> setCurrentIndex(2);
+}
+
 void homescreen::on_pushButton_2_clicked()
 {
     ui -> stackedWidget -> setCurrentIndex(0);
@@ -99,6 +104,10 @@ void homescreen::on_pushButton_4_clicked()
 void homescreen::on_pushButton_3_clicked()
 {
     ui -> stackedWidget -> setCurrentIndex(4);
+}
+
+void homescreen::on_pushButton_5_clicked()
+{
     connOpen();
     QLineSeries *series = new QLineSeries();
     int i;
@@ -121,6 +130,7 @@ void homescreen::on_pushButton_3_clicked()
     chart -> legend() -> hide();
     chart -> setTitle("Sleep record");
     chart -> setTheme(QChart::ChartThemeHighContrast);
+
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
     axisX->setTitleText("Date");
@@ -143,17 +153,6 @@ void homescreen::on_pushButton_3_clicked()
     QChartView *chartView = new QChartView(chart);
     chartView -> setRenderHint(QPainter::Antialiasing);
     chartView -> setParent(ui->horizontalFrame_1);
-
-}
-
-
-void homescreen::on_pushButton_clicked()
-{
-    ui -> stackedWidget -> setCurrentIndex(2);
-}
-
-
-void homescreen::on_pushButton_5_clicked()
-{
+    connClose();
     ui -> stackedWidget -> setCurrentIndex(3);
 }
