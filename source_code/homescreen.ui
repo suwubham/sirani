@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>645</height>
+    <width>1035</width>
+    <height>714</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
-        <number>70</number>
+        <number>100</number>
        </property>
        <property name="topMargin">
         <number>5</number>
@@ -55,7 +55,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButton_5">
          <property name="text">
           <string>Sleep Tracker</string>
          </property>
@@ -69,7 +69,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="pushButton_3">
          <property name="text">
           <string>Resources</string>
          </property>
@@ -90,35 +90,30 @@
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="Dashboard">
-          <widget class="QLabel" name="label">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>10</y>
-             <width>221</width>
-             <height>71</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Dashboard</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="label_6">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>90</y>
-             <width>331</width>
-             <height>71</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,9">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Dashboard</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="horizontalFrame">
+             <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="Goals">
           <widget class="QLabel" name="label_2">
@@ -151,19 +146,27 @@
           </widget>
          </widget>
          <widget class="QWidget" name="Sleeptracker">
-          <widget class="QLabel" name="label_4">
-           <property name="geometry">
-            <rect>
-             <x>20</x>
-             <y>30</y>
-             <width>151</width>
-             <height>61</height>
-            </rect>
-           </property>
-           <property name="text">
-            <string>Sleep tracker</string>
-           </property>
-          </widget>
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,9">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Sleep tracker</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>How many hours did you sleep today?</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="horizontalFrame_1">
+             <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+            </widget>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="Resources">
           <widget class="QLabel" name="label_5">

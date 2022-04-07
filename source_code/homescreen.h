@@ -5,6 +5,9 @@
 #include<QtSql>
 #include <QDebug>
 #include <QFileInfo>
+#include <QtCharts>
+#include <QChartView>
+#include <QLineSeries>
 #include "connection.h"
 
 namespace Ui {
@@ -16,7 +19,9 @@ class homescreen : public QMainWindow
     Q_OBJECT
 
 public:
+
     explicit homescreen(QWidget *parent = nullptr);
+    QString current_user;
     ~homescreen();
 
 private slots:
@@ -31,6 +36,10 @@ private slots:
     void on_pushButton_clicked();
 
     void on_pushButton_5_clicked();
+
+
+
+
 
 private:
     Ui::homescreen *ui;

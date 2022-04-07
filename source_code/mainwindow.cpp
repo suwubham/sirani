@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
+#include <QDateTime>
+#include <QDebug>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -45,8 +47,7 @@ void MainWindow::on_button_login_clicked()
             qry3.exec();
             connClose();
             home = new homescreen();
-            home -> show();
-            this -> hide();
+            home -> showMaximized();
             this -> hide();
         }
         else{

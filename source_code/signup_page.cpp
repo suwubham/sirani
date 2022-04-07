@@ -65,7 +65,7 @@ void signup_page::on_button_signup_clicked()
     }
     else
     {
-    QSqlQuery qry,qry1;
+    QSqlQuery qry,qry1,qry2;
     int count = 0;
     qry1.prepare("select * from userdetails where user_name='"+u1.username+"'");
     qry1.exec();
@@ -76,7 +76,6 @@ void signup_page::on_button_signup_clicked()
             connClose();
             QMessageBox::information(this,"Message","Username already taken",QMessageBox::Ok);
         }
-
         if (count == 0){
             qry.prepare("INSERT INTO userdetails (first_name, last_name, user_name,"
                         "email, password) VALUES (:fname, :lname, :username, :email, :password)");
@@ -87,6 +86,13 @@ void signup_page::on_button_signup_clicked()
             qry.bindValue(":password", u1.password);
             qry.exec();
             QMessageBox::information(this,"Message","Signed Up Successfully",QMessageBox::Ok);
+
+            QString mood_tablename = u1.username + "_mood";
+            QString sleep_tablename = u1.username + "_sleep";
+            qry2.prepare("CREATE TABLE '"+mood_tablename+"' (date INTEGER, rating INTEGER)");
+            qry2.exec();
+            qry2.prepare("CREATE TABLE '"+sleep_tablename+"' (date INTEGER, hours INTEGER)");
+            qry2.exec();
             connClose();
         }
     }
