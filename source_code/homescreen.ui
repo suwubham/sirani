@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1035</width>
-    <height>714</height>
+    <width>1082</width>
+    <height>731</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -62,16 +62,16 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButton_3">
          <property name="text">
-          <string>Mood Tracker</string>
+          <string>Resources</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="pushButton">
          <property name="text">
-          <string>Resources</string>
+          <string>Mood Tracker</string>
          </property>
         </widget>
        </item>
@@ -146,7 +146,7 @@
           </widget>
          </widget>
          <widget class="QWidget" name="Sleeptracker">
-          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,9">
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,5">
            <item>
             <widget class="QLabel" name="label_4">
              <property name="text">
@@ -155,16 +155,58 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_7">
-             <property name="text">
-              <string>How many hours did you sleep today?</string>
-             </property>
-            </widget>
+            <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,1,1">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>How many hours did you sleep last night?</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_6">
+               <property name="text">
+                <string>Submit</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
            <item>
-            <widget class="QFrame" name="horizontalFrame_1">
-             <layout class="QHBoxLayout" name="horizontalLayout_4"/>
-            </widget>
+            <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="5,0">
+             <property name="spacing">
+              <number>40</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="horizontalFrame_1">
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <item>
+                <widget class="QTableView" name="tableView"/>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_7">
+                 <property name="text">
+                  <string>Remove all data</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
            </item>
           </layout>
          </widget>

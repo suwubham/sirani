@@ -25,6 +25,10 @@ public:
     ~homescreen();
 
 private slots:
+    void showsleep_dashboard();
+
+    void showsleep_sleeptracker();
+
     void Date_Time();
 
     void on_pushButton_2_clicked();
@@ -37,9 +41,9 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void on_pushButton_6_clicked();
 
-
-
+    void on_pushButton_7_clicked();
 
 private:
     Ui::homescreen *ui;
