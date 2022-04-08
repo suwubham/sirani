@@ -26,11 +26,12 @@
    <string>Signup to sirani</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/IMG/signup-02.png);
+   <string notr="true">#signup_page{
+background-image: url(:/IMG/signup-02.png);
 background-repeat: repeat-y;
-
-
-background-color: #FEFAF1;</string>
+background-color: #FEFAF1;
+}
+</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -265,6 +266,9 @@ color: #3C465F;</string>
      border-style: solid;
      border-color: #898479;
 border-radius: 4px;</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::PasswordEchoOnEdit</enum>
         </property>
        </widget>
       </item>

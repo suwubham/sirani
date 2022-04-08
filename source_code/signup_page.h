@@ -21,8 +21,9 @@ public:
     ~signup_page();
 
 private slots:
-
     void on_button_signup_clicked();
+
+
 
 private:
     Ui::signup_page *ui;

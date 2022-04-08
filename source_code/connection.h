@@ -4,8 +4,7 @@
 
 bool connOpen();
 void connClose();
-bool Email_check(QString email);
-bool pw_check(QString pw);
+
 
 class User{
 public:
@@ -14,6 +13,11 @@ public:
     QString email;
     QString password;
     QString username;
+
+public:
+    bool Email_check(QString email);
+    bool pw_check(QString pw);
+
 };
 
 

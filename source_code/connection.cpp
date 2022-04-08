@@ -4,11 +4,12 @@
 #include <QFileInfo>
 #include <QRegularExpression>
 #include <stdio.h>
+
 QSqlDatabase auth;
 
 bool connOpen(){
     QSqlDatabase auth=QSqlDatabase::addDatabase("QSQLITE");
-    auth.setDatabaseName("C:/Users/subani/OneDrive/Desktop/KU/project/sirani/sirani.db");
+    auth.setDatabaseName("C:/Users/shubh/Desktop/sirani.db");
     if(!auth.open()){
         qDebug()<<("Failed");
         return false;
@@ -23,30 +24,3 @@ void connClose(){
     auth.close();
     auth.removeDatabase(QSqlDatabase::defaultConnection);
 }
-
-bool Email_check(QString email)
-{
-    QRegularExpression regex ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
-    if(!regex.match(email).hasMatch())
-    {
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-
-bool pw_check(QString pw)
-{
-    QRegularExpression regex ("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
-    if(!regex.match(pw).hasMatch())
-    {
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-
-
-
