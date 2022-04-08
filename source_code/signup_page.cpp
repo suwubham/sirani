@@ -24,7 +24,7 @@ bool User::Email_check(QString email)
     QRegularExpression regex ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
     if(!regex.match(email).hasMatch())
     {
-        return true;
+        return false;
     }
     else{
         return false;
@@ -36,7 +36,7 @@ bool User::pw_check(QString pw)
     QRegularExpression regex ("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
     if(!regex.match(pw).hasMatch())
     {
-        return true;
+        return false;
     }
     else{
         return false;
@@ -89,9 +89,12 @@ void signup_page::on_button_signup_clicked()
 
             QString mood_tablename = u1.username + "_mood";
             QString sleep_tablename = u1.username + "_sleep";
+            QString goal_tablename = u1.username + "_goal";
             qry2.prepare("CREATE TABLE '"+mood_tablename+"' (date INTEGER, rating INTEGER)");
             qry2.exec();
             qry2.prepare("CREATE TABLE '"+sleep_tablename+"' (date INTEGER, hours INTEGER)");
+            qry2.exec();
+            qry2.prepare("CREATE TABLE '"+goal_tablename+"' (date INTEGER, type text, goal text)");
             qry2.exec();
             connClose();
         }
