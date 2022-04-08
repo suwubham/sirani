@@ -58,7 +58,6 @@ void homescreen :: showsleep_dashboard(){
     int noofrows = qry2.value(0).toInt();
 
     int offset = noofrows - 7;
-    qDebug() << noofrows << offset;
 
     QLineSeries *series = new QLineSeries();
     int i;
@@ -68,15 +67,12 @@ void homescreen :: showsleep_dashboard(){
     if (qry3.exec()){
         while (qry3.next()){
             count = count + 1;
+        }
     }
-    }
-
-    qDebug() << count;
 
     qry1.prepare("select * from '"+sleep_table+"' limit 7 offset :offsetvalue");
     qry1.bindValue(":offsetvalue",offset);
     qry1.exec();
-
 
     for (i=0; i<count; i++){
         qry1.next();
@@ -253,11 +249,51 @@ void homescreen::on_pushButton_clicked()
 void homescreen::on_pushButton_2_clicked()
 {
     showsleep_dashboard();
+    showmood_dashboard();
     ui -> stackedWidget -> setCurrentIndex(0);
 }
 
 void homescreen::on_pushButton_4_clicked()
 {
+    //here
+    QString goal_table = current_user + "_goal";
+
+    QSqlQueryModel *modal = new QSqlQueryModel();
+    QSqlQuery *qry = new QSqlQuery();
+    qry -> prepare("select date,goal from '"+goal_table+"' where type = 'Yearly';");
+    qry -> exec();
+    modal -> setQuery(*qry);
+    ui -> tableView_2 -> setModel(modal);
+    ui -> tableView_2 -> resizeColumnsToContents();
+    ui -> tableView_2 -> resizeRowsToContents();
+
+    QSqlQueryModel *modal1 = new QSqlQueryModel();
+    QSqlQuery *qry1 = new QSqlQuery();
+    qry1 -> prepare("select date,goal from '"+goal_table+"' where type = 'Weekly';");
+    qry1 -> exec();
+    modal1 -> setQuery(*qry1);
+    ui -> tableView_4 -> setModel(modal1);
+    ui -> tableView_4 -> resizeColumnsToContents();
+    ui -> tableView_4 -> resizeRowsToContents();
+
+    QSqlQueryModel *modal2 = new QSqlQueryModel();
+    QSqlQuery *qry2 = new QSqlQuery();
+    qry2 -> prepare("select date,goal from '"+goal_table+"' where type = 'Monthly';");
+    qry2 -> exec();
+    modal2 -> setQuery(*qry2);
+    ui -> tableView_3 -> setModel(modal2);
+    ui -> tableView_3 -> resizeColumnsToContents();
+    ui -> tableView_3 -> resizeRowsToContents();
+
+    QSqlQueryModel *modal3 = new QSqlQueryModel();
+    QSqlQuery *qry3 = new QSqlQuery();
+    qry3 -> prepare("select date,goal from '"+goal_table+"' where type = 'Daily';");
+    qry3 -> exec();
+    modal3 -> setQuery(*qry3);
+    ui -> tableView_5 -> setModel(modal3);
+    ui -> tableView_5 -> resizeColumnsToContents();
+    ui -> tableView_5 -> resizeRowsToContents();
+
     ui -> stackedWidget -> setCurrentIndex(1);
 }
 
@@ -270,10 +306,6 @@ void homescreen::on_pushButton_5_clicked()
 {
     showsleep_sleeptracker();
     QString sleep_table = current_user + "_sleep";
-    QSqlQuery qry2;
-    qry2.prepare("select count(*) from '"+sleep_table+"'");
-    qry2.exec();
-    qry2.first();
     QSqlQueryModel *modal = new QSqlQueryModel();
     QSqlQuery *qry = new QSqlQuery();
     qry -> prepare("select * from '"+sleep_table+"' ");
@@ -291,6 +323,7 @@ void homescreen::on_pushButton_6_clicked()
     QSqlQuery qry1,qry2;
     int hours = ui -> lineEdit -> text().toInt();
     QDateTime clock = QDateTime::currentDateTime();
+    clock = clock.addDays(-1);
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
     qry1.prepare("INSERT INTO '"+sleep_table+"' (date, hours) "
                  "VALUES (:dates, :hour)");
@@ -399,11 +432,11 @@ void homescreen :: showmood_dashboard(){
     chartView -> setParent(ui->horizontalFrame_4);
 }
 
-
 void homescreen::on_pushButton_10_clicked()
 {
     QString goal_table = current_user + "_goal";
     QSqlQuery qry1;
+
     QString type = ui -> comboBox -> currentText();
     QString goal = ui -> lineEdit_2 -> text();
     QDateTime clock = QDateTime::currentDateTime();
@@ -414,5 +447,54 @@ void homescreen::on_pushButton_10_clicked()
     qry1.bindValue(":types", type);
     qry1.bindValue(":goals", goal);
     qry1.exec();
+    on_pushButton_4_clicked();
+}
+
+void homescreen::on_tableView_2_doubleClicked(const QModelIndex &index)
+{
+    QString goal_table = current_user + "_goal";
+    QString val = ui -> tableView_2 -> model() -> data(index).toString();
+    QSqlQuery qry;
+    qry.prepare("delete from '"+goal_table+"' where goal = :value or date = :value or type = :value");
+    qry.bindValue(":value",val);
+    qry.exec();
+    on_pushButton_4_clicked();
+}
+
+
+void homescreen::on_tableView_3_doubleClicked(const QModelIndex &index)
+{
+    QString goal_table = current_user + "_goal";
+    QString val = ui -> tableView_3 -> model() -> data(index).toString();
+    QSqlQuery qry;
+    qry.prepare("delete from '"+goal_table+"' where goal = :value or date = :value or type = :value");
+    qry.bindValue(":value",val);
+    qry.exec();
+    on_pushButton_4_clicked();
+}
+
+
+
+void homescreen::on_tableView_4_doubleClicked(const QModelIndex &index)
+{
+    QString goal_table = current_user + "_goal";
+    QString val = ui -> tableView_4 -> model() -> data(index).toString();
+    QSqlQuery qry;
+    qry.prepare("delete from '"+goal_table+"' where goal = :value or date = :value or type = :value");
+    qry.bindValue(":value",val);
+    qry.exec();
+    on_pushButton_4_clicked();
+}
+
+
+void homescreen::on_tableView_5_doubleClicked(const QModelIndex &index)
+{
+    QString goal_table = current_user + "_goal";
+    QString val = ui -> tableView_5 -> model() -> data(index).toString();
+    QSqlQuery qry;
+    qry.prepare("delete from '"+goal_table+"' where goal = :value or date = :value or type = :value");
+    qry.bindValue(":value",val);
+    qry.exec();
+    on_pushButton_4_clicked();
 }
 
