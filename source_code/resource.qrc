@@ -3,5 +3,13 @@
     <qresource prefix="/IMG">
         <file>bg-01.png</file>
         <file>signup-02.png</file>
+        <file>sirani-03-03.png</file>
+        <file>star icon-02-02.png</file>
+        <file>home icon-02.png</file>
+        <file>night icon-02.png</file>
+        <file>bookmark icon-02.png</file>
+        <file>goals icon-02.png</file>
+        <file>bg clock-04.png</file>
+        <file>bgresource-05-05.png</file>
     </qresource>
 </RCC>
