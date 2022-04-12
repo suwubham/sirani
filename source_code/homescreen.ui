@@ -274,7 +274,7 @@ font: 11pt &quot;Foco&quot;;}</string>
           <string>   Mood Tracker </string>
          </property>
          <property name="icon">
-          <iconset resource="resource.qrc">
+          <iconset>
            <normaloff>:/IMG/star icon-02-02.png</normaloff>:/IMG/star icon-02-02.png</iconset>
          </property>
          <property name="iconSize">
@@ -394,10 +394,39 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>3</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="Dashboard">
-          <layout class="QVBoxLayout" name="verticalLayout_2" stretch=""/>
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,7">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QFrame" name="horizontalFrame_4">
+               <layout class="QHBoxLayout" name="horizontalLayout_9"/>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="horizontalFrame">
+               <layout class="QHBoxLayout" name="horizontalLayout_7"/>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
          </widget>
          <widget class="QWidget" name="Goals">
           <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0">
@@ -673,8 +702,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>560</width>
-                <height>360</height>
+                <width>105</width>
+                <height>105</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
