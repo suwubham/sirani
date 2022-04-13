@@ -38,6 +38,8 @@ private slots:
 
     void Date_Time();
 
+    void No_Same_Date();
+
     void on_MoodTrackerButton_clicked();
 
     void on_DashBoardButton_clicked();
