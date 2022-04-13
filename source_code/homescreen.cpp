@@ -413,8 +413,8 @@ void homescreen::on_HappyButton_clicked()
 
 void homescreen::on_CalmButton_clicked()
 {
-    No_Same_Date();
-    on_MoodTrackerButton_clicked();
+    //No_Same_Date();
+    //on_MoodTrackerButton_clicked();
 }
 
 void homescreen :: showmood_dashboard(){
@@ -540,14 +540,14 @@ void homescreen::on_DailyGoalsTable_doubleClicked(const QModelIndex &index)
 
 void homescreen::on_SadButton_clicked()
 {
-    No_Same_Date();
-    on_MoodTrackerButton_clicked();
+    //No_Same_Date();
+    //on_MoodTrackerButton_clicked();
 }
 
 
 void homescreen::on_AngryButton_clicked()
 {
-    No_Same_Date();
-    on_MoodTrackerButton_clicked();
+    //No_Same_Date();
+    //on_MoodTrackerButton_clicked();
 }
 
