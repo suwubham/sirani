@@ -96,10 +96,9 @@ border-radius: 15px;</string>
         </spacer>
        </item>
        <item row="1" column="0" colspan="2">
-        <widget class="QLabel" name="label_12">
+        <widget class="QLabel" name="Sirani">
          <property name="font">
           <font>
-           <family>FONTSPRING DEMO - Pontiac Black</family>
            <pointsize>30</pointsize>
            <italic>false</italic>
            <bold>true</bold>
@@ -131,7 +130,7 @@ font: 700 30pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;</string>
         </spacer>
        </item>
        <item row="3" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="DashBoardButton">
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
@@ -139,9 +138,9 @@ font: 700 30pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;</string>
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton_2:hover{
+          <string notr="true">#DashBoardButton:hover{
 color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
-#pushButton_2{color:rgb(254, 250, 241);
+#DashBoardButton{color:rgb(254, 250, 241);
 font: 11pt &quot;Foco&quot;;}</string>
          </property>
          <property name="text">
@@ -173,14 +172,14 @@ font: 11pt &quot;Foco&quot;;}</string>
         </spacer>
        </item>
        <item row="5" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="GoalsButton">
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton_4:hover{
+          <string notr="true">#GoalsButton:hover{
 color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
-#pushButton_4{color:rgb(254, 250, 241);
+#GoalsButton{color:rgb(254, 250, 241);
 font: 11pt &quot;Foco&quot;;}</string>
          </property>
          <property name="text">
@@ -211,33 +210,6 @@ font: 11pt &quot;Foco&quot;;}</string>
          </property>
         </spacer>
        </item>
-       <item row="7" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_5">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-#pushButton_5:hover{
-color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
-#pushButton_5{color:rgb(254, 250, 241);
-font: 11pt &quot;Foco&quot;;}</string>
-         </property>
-         <property name="text">
-          <string>   Sleep Tracker</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/IMG/night icon-02.png</normaloff>:/IMG/night icon-02.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>24</width>
-           <height>24</height>
-          </size>
-         </property>
-        </widget>
-       </item>
        <item row="8" column="0" colspan="2">
         <spacer name="horizontalSpacer_5">
          <property name="orientation">
@@ -252,10 +224,9 @@ font: 11pt &quot;Foco&quot;;}</string>
         </spacer>
        </item>
        <item row="9" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="MoodTrackerButton">
          <property name="font">
           <font>
-           <family>Foco</family>
            <pointsize>11</pointsize>
            <italic>false</italic>
            <bold>false</bold>
@@ -265,9 +236,9 @@ font: 11pt &quot;Foco&quot;;}</string>
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton:hover{
+          <string notr="true">#MoodTrackerButton:hover{
 color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
-#pushButton{color:rgb(254, 250, 241);
+#MoodTrackerButton{color:rgb(254, 250, 241);
 font: 11pt &quot;Foco&quot;;}</string>
          </property>
          <property name="text">
@@ -299,16 +270,16 @@ font: 11pt &quot;Foco&quot;;}</string>
         </spacer>
        </item>
        <item row="11" column="0" colspan="2">
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="ResourcesButton">
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">
-#pushButton_3:hover{
+#ResourcesButton:hover{
 color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
 
-#pushButton_3{color:rgb(254, 250, 241);
+#ResourcesButton{color:rgb(254, 250, 241);
 font: 11pt &quot;Foco&quot;;}</string>
          </property>
          <property name="text">
@@ -343,7 +314,6 @@ font: 11pt &quot;Foco&quot;;}</string>
         <widget class="QLabel" name="Clock">
          <property name="font">
           <font>
-           <family>Foco</family>
            <pointsize>9</pointsize>
            <bold>true</bold>
           </font>
@@ -375,6 +345,36 @@ font: 11pt &quot;Foco&quot;;}</string>
          </property>
         </spacer>
        </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QPushButton" name="SleepTrackerButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+#SleepTrackerButton:hover{
+color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
+#SleepTrackerButton{color:rgb(254, 250, 241);
+font: 11pt &quot;Foco&quot;;}</string>
+         </property>
+         <property name="text">
+          <string>   Sleep Tracker</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/IMG/night icon-02.png</normaloff>:/IMG/night icon-02.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -394,7 +394,7 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="Dashboard">
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,7">
@@ -406,7 +406,7 @@ border-radius: 20px</string>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_6">
+            <widget class="QLabel" name="WelcomeUser">
              <property name="text">
               <string>TextLabel</string>
              </property>
@@ -431,7 +431,7 @@ border-radius: 20px</string>
          <widget class="QWidget" name="Goals">
           <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0">
            <item>
-            <widget class="QLabel" name="label_2">
+            <widget class="QLabel" name="GoalTitle">
              <property name="text">
               <string>Goals</string>
              </property>
@@ -457,17 +457,17 @@ border-radius: 20px</string>
                 <number>20</number>
                </property>
                <item>
-                <widget class="QLabel" name="label_10">
+                <widget class="QLabel" name="GoalsQuestion">
                  <property name="text">
                   <string>What do you want to get done?</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="lineEdit_2"/>
+                <widget class="QLineEdit" name="GoalEnterArea"/>
                </item>
                <item>
-                <widget class="QLabel" name="label_11">
+                <widget class="QLabel" name="GoalsType">
                  <property name="text">
                   <string>What type of goal is it?</string>
                  </property>
@@ -477,7 +477,7 @@ border-radius: 20px</string>
                 <widget class="QComboBox" name="comboBox"/>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton_10">
+                <widget class="QPushButton" name="GoalsSubmitButton">
                  <property name="text">
                   <string>Submit</string>
                  </property>
@@ -509,7 +509,7 @@ border-radius: 20px</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_9">
                  <item>
-                  <widget class="QTableView" name="tableView_2"/>
+                  <widget class="QTableView" name="YearlyGoalsTable"/>
                  </item>
                 </layout>
                </widget>
@@ -519,7 +519,7 @@ border-radius: 20px</string>
                 </attribute>
                 <layout class="QHBoxLayout" name="horizontalLayout_13">
                  <item>
-                  <widget class="QTableView" name="tableView_3"/>
+                  <widget class="QTableView" name="MonthlyGoalsTable"/>
                  </item>
                 </layout>
                </widget>
@@ -529,7 +529,7 @@ border-radius: 20px</string>
                 </attribute>
                 <layout class="QHBoxLayout" name="horizontalLayout_15">
                  <item>
-                  <widget class="QTableView" name="tableView_4"/>
+                  <widget class="QTableView" name="WeeklyGoalsTable"/>
                  </item>
                 </layout>
                </widget>
@@ -539,7 +539,7 @@ border-radius: 20px</string>
                 </attribute>
                 <layout class="QVBoxLayout" name="verticalLayout_10">
                  <item>
-                  <widget class="QTableView" name="tableView_5"/>
+                  <widget class="QTableView" name="DailyGoalsTable"/>
                  </item>
                 </layout>
                </widget>
@@ -552,14 +552,14 @@ border-radius: 20px</string>
          <widget class="QWidget" name="Moodtracker">
           <layout class="QVBoxLayout" name="verticalLayout_6" stretch="1,1,4,10">
            <item>
-            <widget class="QLabel" name="label_3">
+            <widget class="QLabel" name="MoodTrackerTitle">
              <property name="text">
               <string>Mood Tracker</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_8">
+            <widget class="QLabel" name="MoodQuestion">
              <property name="text">
               <string>How are you feeling today?</string>
              </property>
@@ -568,28 +568,28 @@ border-radius: 20px</string>
            <item>
             <layout class="QGridLayout" name="gridLayout">
              <item row="1" column="0">
-              <widget class="QPushButton" name="pushButton_9">
+              <widget class="QPushButton" name="CalmButton">
                <property name="text">
                 <string>Calm</string>
                </property>
               </widget>
              </item>
              <item row="0" column="0">
-              <widget class="QPushButton" name="pushButton_8">
+              <widget class="QPushButton" name="HappyButton">
                <property name="text">
                 <string>Happy</string>
                </property>
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QPushButton" name="pushButton_11">
+              <widget class="QPushButton" name="SadButton">
                <property name="text">
                 <string>Sad</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QPushButton" name="pushButton_12">
+              <widget class="QPushButton" name="AngryButton">
                <property name="text">
                 <string>Angry</string>
                </property>
@@ -605,7 +605,7 @@ border-radius: 20px</string>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label_9">
+              <widget class="QLabel" name="AverageMood">
                <property name="text">
                 <string>TextLabel</string>
                </property>
@@ -618,7 +618,7 @@ border-radius: 20px</string>
          <widget class="QWidget" name="Sleeptracker">
           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,5">
            <item>
-            <widget class="QLabel" name="label_4">
+            <widget class="QLabel" name="SleepTrackerTitle">
              <property name="text">
               <string>Sleep tracker</string>
              </property>
@@ -627,17 +627,17 @@ border-radius: 20px</string>
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,1,1">
              <item>
-              <widget class="QLabel" name="label_7">
+              <widget class="QLabel" name="SleepQuestion">
                <property name="text">
                 <string>How many hours did you sleep last night?</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit"/>
+              <widget class="QLineEdit" name="SleepEnterArea"/>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_6">
+              <widget class="QPushButton" name="SleepTrackerSubmitButton">
                <property name="text">
                 <string>Submit</string>
                </property>
@@ -665,10 +665,10 @@ border-radius: 20px</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_4">
                <item>
-                <widget class="QTableView" name="tableView"/>
+                <widget class="QTableView" name="SleepTable"/>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton_7">
+                <widget class="QPushButton" name="SleepTrackerRemoveAllDataButton">
                  <property name="text">
                   <string>Remove all data</string>
                  </property>
@@ -686,7 +686,7 @@ border-radius: 20px</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout" stretch="1,2">
            <item>
-            <widget class="QLabel" name="label_5">
+            <widget class="QLabel" name="ResourceImg">
              <property name="styleSheet">
               <string notr="true">background-image: url(:/IMG/bgresource-05-05.png);
 background-repeat: repeat-x;
