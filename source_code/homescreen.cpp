@@ -385,6 +385,7 @@ void homescreen::on_pushButton_8_clicked()
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
     current_date = clock.toString("ddMMyyyy");
 
+
     qry2.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
     qry2.exec();
     qry2.next();
