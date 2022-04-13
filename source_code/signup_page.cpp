@@ -90,7 +90,7 @@ void signup_page::on_button_signup_clicked()
             QString mood_tablename = u1.username + "_mood";
             QString sleep_tablename = u1.username + "_sleep";
             QString goal_tablename = u1.username + "_goal";
-            qry2.prepare("CREATE TABLE '"+mood_tablename+"' (date INTEGER, rating INTEGER)");
+            qry2.prepare("CREATE TABLE '"+mood_tablename+"' (date INTEGER, mood text)");
             qry2.exec();
             qry2.prepare("CREATE TABLE '"+sleep_tablename+"' (date INTEGER, hours INTEGER)");
             qry2.exec();

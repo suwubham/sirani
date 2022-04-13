@@ -8,6 +8,8 @@
 #include <QtCharts>
 #include <QChartView>
 #include <QLineSeries>
+#include <QBarSet>
+#include <QBarSeries>
 #include "connection.h"
 
 namespace Ui {
@@ -22,6 +24,7 @@ public:
 
     explicit homescreen(QWidget *parent = nullptr);
     QString current_user;
+    QString current_mood;
     ~homescreen();
 
 private slots:
@@ -63,6 +66,10 @@ private slots:
     void on_tableView_4_doubleClicked(const QModelIndex &index);
 
     void on_tableView_5_doubleClicked(const QModelIndex &index);
+
+    void on_pushButton_11_clicked();
+
+    void on_pushButton_12_clicked();
 
 private:
     Ui::homescreen *ui;
