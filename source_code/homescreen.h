@@ -8,6 +8,8 @@
 #include <QtCharts>
 #include <QChartView>
 #include <QLineSeries>
+#include <QBarSet>
+#include <QBarSeries>
 #include "connection.h"
 
 namespace Ui {
@@ -22,6 +24,7 @@ public:
 
     explicit homescreen(QWidget *parent = nullptr);
     QString current_user;
+    QString current_mood;
     ~homescreen();
 
 private slots:
@@ -35,34 +38,39 @@ private slots:
 
     void Date_Time();
 
-    void on_pushButton_2_clicked();
+    void on_MoodTrackerButton_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_DashBoardButton_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_ResourcesButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_GoalsButton_clicked();
 
-    void on_pushButton_5_clicked();
+    void on_SleepTrackerButton_clicked();
 
-    void on_pushButton_6_clicked();
+    void on_SleepTrackerSubmitButton_clicked();
 
-    void on_pushButton_7_clicked();
+    void on_SleepTrackerRemoveAllDataButton_clicked();
 
-    void on_pushButton_8_clicked();
+    void on_HappyButton_clicked();
+
+    void on_CalmButton_clicked();
+
+    void on_GoalsSubmitButton_clicked();
+
+    void on_SadButton_clicked();
+
+    void on_AngryButton_clicked();
+
+    void on_YearlyGoalsTable_doubleClicked(const QModelIndex &index);
+
+    void on_MonthlyGoalsTable_doubleClicked(const QModelIndex &index);
+
+    void on_WeeklyGoalsTable_doubleClicked(const QModelIndex &index);
+
+    void on_DailyGoalsTable_doubleClicked(const QModelIndex &index);
 
 
-    void on_pushButton_9_clicked();
-
-    void on_pushButton_10_clicked();
-
-    void on_tableView_2_doubleClicked(const QModelIndex &index);
-
-    void on_tableView_3_doubleClicked(const QModelIndex &index);
-
-    void on_tableView_4_doubleClicked(const QModelIndex &index);
-
-    void on_tableView_5_doubleClicked(const QModelIndex &index);
 
 private:
     Ui::homescreen *ui;

@@ -9,9 +9,9 @@ signup_page::signup_page(QWidget *parent) :
 {
     ui->setupUi(this);
     if(!connOpen())
-        ui->label_3->setText("Failed");
+        ui->DBConnStatus->setText("Failed");
     else
-        ui->label_3->setText("Connected");
+        ui->DBConnStatus->setText("Connected");
 }
 
 signup_page::~signup_page()
@@ -24,7 +24,7 @@ bool User::Email_check(QString email)
     QRegularExpression regex ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
     if(!regex.match(email).hasMatch())
     {
-        return false;
+        return true;
     }
     else{
         return false;
@@ -36,7 +36,7 @@ bool User::pw_check(QString pw)
     QRegularExpression regex ("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
     if(!regex.match(pw).hasMatch())
     {
-        return false;
+        return true;
     }
     else{
         return false;
@@ -90,7 +90,7 @@ void signup_page::on_button_signup_clicked()
             QString mood_tablename = u1.username + "_mood";
             QString sleep_tablename = u1.username + "_sleep";
             QString goal_tablename = u1.username + "_goal";
-            qry2.prepare("CREATE TABLE '"+mood_tablename+"' (date INTEGER, rating INTEGER)");
+            qry2.prepare("CREATE TABLE '"+mood_tablename+"' (date INTEGER, mood text)");
             qry2.exec();
             qry2.prepare("CREATE TABLE '"+sleep_tablename+"' (date INTEGER, hours INTEGER)");
             qry2.exec();
