@@ -112,7 +112,7 @@ background-color: #FEFAF1;
         </spacer>
        </item>
        <item row="1" column="0" colspan="2">
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="Login">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
@@ -127,7 +127,6 @@ background-color: #FEFAF1;
          </property>
          <property name="font">
           <font>
-           <family>FONTSPRING DEMO - Pontiac Black</family>
            <pointsize>30</pointsize>
            <italic>false</italic>
            <bold>true</bold>
@@ -145,7 +144,7 @@ background: #FEFAF1 ;
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="WelcomeBack">
          <property name="styleSheet">
           <string notr="true">font: 11pt &quot;Foco&quot;;
 color: rgb(167, 167, 167);
@@ -170,7 +169,7 @@ background: transparent;</string>
         </spacer>
        </item>
        <item row="4" column="0" colspan="2">
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="Username">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -213,7 +212,7 @@ border-radius: 4px;</string>
         </spacer>
        </item>
        <item row="7" column="0" colspan="2">
-        <widget class="QLabel" name="label_4">
+        <widget class="QLabel" name="Password">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -238,7 +237,7 @@ color: #3C465F;</string>
 border-radius: 4px;</string>
          </property>
          <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
+          <enum>QLineEdit::PasswordEchoOnEdit</enum>
          </property>
         </widget>
        </item>
@@ -274,7 +273,6 @@ border-radius: 4px;</string>
          </property>
          <property name="font">
           <font>
-           <family>Foco</family>
            <pointsize>12</pointsize>
            <italic>false</italic>
            <bold>false</bold>
@@ -323,7 +321,7 @@ color: #FEFAF1;}</string>
         </spacer>
        </item>
        <item row="12" column="0">
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="NewUser">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -334,21 +332,20 @@ color: #3C465F;</string>
         </widget>
        </item>
        <item row="12" column="1">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="SignUpButton">
          <property name="font">
           <font>
-           <family>Foco</family>
            <pointsize>13</pointsize>
            <italic>false</italic>
            <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">#pushButton{text-align: left;
+          <string notr="true">#SignUpButton{text-align: left;
 font: 12.5pt &quot;Foco&quot;;
 color: #FF6768;
 background: transparent;}
-#pushButton:hover{background: transparent;
+#SignUpButton:hover{background: transparent;
 color: #FFB391;}</string>
          </property>
          <property name="text">
@@ -357,7 +354,7 @@ color: #FFB391;}</string>
         </widget>
        </item>
        <item row="14" column="0" colspan="2">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="DBConnStatus">
          <property name="font">
           <font>
            <pointsize>7</pointsize>
