@@ -394,7 +394,7 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="Dashboard">
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,1,7">
@@ -501,7 +501,7 @@ border-radius: 20px</string>
              <item>
               <widget class="QTabWidget" name="tabWidget">
                <property name="currentIndex">
-                <number>2</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="Yearly">
                 <attribute name="title">
@@ -710,8 +710,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>527</width>
-                <height>338</height>
+                <width>105</width>
+                <height>105</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">

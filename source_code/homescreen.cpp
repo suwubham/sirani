@@ -351,16 +351,51 @@ void homescreen::on_SleepTrackerButton_clicked()
 void homescreen::on_SleepTrackerSubmitButton_clicked()
 {
     QString sleep_table = current_user + "_sleep";
-    QSqlQuery qry1,qry2;
+    QSqlQuery qry,qry1,qry2,qry3;
     int hours = ui -> SleepEnterArea -> text().toInt();
+    int count;
+    QString current_date, last_date;
+    QStringList lastdatelist;
     QDateTime clock = QDateTime::currentDateTime();
     clock = clock.addDays(-1);
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
+    current_date = clock.toString("ddMMyyyy");
+
+
+    qry.prepare("select count(*) from '"+sleep_table+"'");
+    qry.exec();
+    qry.next();
+    count = qry.value(0).toInt();
+
+    if (count ==0){
     qry1.prepare("INSERT INTO '"+sleep_table+"' (date, hours) "
                  "VALUES (:dates, :hour)");
     qry1.bindValue(":dates", clock_text);
     qry1.bindValue(":hour", hours);
     qry1.exec();
+    }
+
+    else {
+        qry3.prepare("SELECT * FROM '"+sleep_table+"' ORDER BY date DESC LIMIT 1");
+        qry3.exec();
+        qry3.next();
+
+        lastdatelist =  qry3.value(0).toString().split(" ").mid(1,3);
+        last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
+
+        qDebug() << lastdatelist << last_date << current_date;
+
+        if (current_date != last_date){
+            qry2.prepare("INSERT INTO '"+sleep_table+"' (date, hours) "
+                         "VALUES (:dates, :hour)");
+            qry2.bindValue(":dates", clock_text);
+            qry2.bindValue(":hour", hours);
+            qry2.exec();
+        }
+        else{
+            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+        }
+    }
     on_SleepTrackerButton_clicked();
 }
 
@@ -377,33 +412,49 @@ void homescreen::on_SleepTrackerRemoveAllDataButton_clicked()
 void homescreen::on_HappyButton_clicked()
 {
     showmood_moodtracker();
+    int count;
+    QSqlQuery qry,qry1,qry2,qry3;
+
     QString mood_table = current_user + "_mood";
     QString current_date, last_date;
     QStringList lastdatelist;
-    QSqlQuery qry1,qry2;
+
     QDateTime clock = QDateTime::currentDateTime();
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
     current_date = clock.toString("ddMMyyyy");
 
-    qry2.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
-    qry2.exec();
-    qry2.next();
+    qry.prepare("select count(*) from '"+mood_table+"'");
+    qry.exec();
+    qry.next();
+    count = qry.value(0).toInt();
 
-    lastdatelist =  qry2.value(0).toString().split(" ").mid(1,3);
-    last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
+    if (count!=0){
+        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        qry3.exec();
+        qry3.next();
 
-    qDebug() << lastdatelist << last_date << current_date;
+        lastdatelist =  qry3.value(0).toString().split(" ").mid(1,3);
+        last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
 
-    if (current_date != last_date){
-    qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) "
-                 "VALUES (:dates, :mood)");
-    qry1.bindValue(":dates", clock_text);
-    qry1.bindValue(":mood", "Happy");
-    qry1.next();
-    qry1.exec();
+        qDebug() << lastdatelist << last_date << current_date;
+
+        if (current_date != last_date){
+        qry2.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry2.bindValue(":dates", clock_text);
+        qry2.bindValue(":mood", "Happy");
+        qry2.next();
+        qry2.exec();
+        }
+        else{
+            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+        }
     }
-    else{
-        QMessageBox::information(this,"Message","fk u",QMessageBox::Ok);
+    else {
+        qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry1.bindValue(":dates", clock_text);
+        qry1.bindValue(":mood", "Happy");
+        qry1.next();
+        qry1.exec();
     }
     on_MoodTrackerButton_clicked();
     showmood_moodtracker();
@@ -411,16 +462,54 @@ void homescreen::on_HappyButton_clicked()
 
 void homescreen::on_CalmButton_clicked()
 {
+    showmood_moodtracker();
+    int count;
+    QSqlQuery qry,qry1,qry2,qry3;
+
     QString mood_table = current_user + "_mood";
-    QSqlQuery qry1;
+    QString current_date, last_date;
+    QStringList lastdatelist;
+
     QDateTime clock = QDateTime::currentDateTime();
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
-    qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) "
-                 "VALUES (:dates, :mood)");
-    qry1.bindValue(":dates", clock_text);
-    qry1.bindValue(":mood", "Calm");
-    qry1.exec();
+    current_date = clock.toString("ddMMyyyy");
+
+    qry.prepare("select count(*) from '"+mood_table+"'");
+    qry.exec();
+    qry.next();
+    count = qry.value(0).toInt();
+
+    if (count!=0){
+        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        qry3.exec();
+        qry3.next();
+
+        lastdatelist =  qry3.value(0).toString().split(" ").mid(1,3);
+        last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
+
+        qDebug() << lastdatelist << last_date << current_date;
+
+        if (current_date != last_date){
+        qry2.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry2.bindValue(":dates", clock_text);
+        qry2.bindValue(":mood", "Calm");
+        qry2.next();
+        qry2.exec();
+        }
+        else{
+            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+        }
+    }
+    else {
+        qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry1.bindValue(":dates", clock_text);
+        qry1.bindValue(":mood", "Calm");
+        qry1.next();
+        qry1.exec();
+    }
     on_MoodTrackerButton_clicked();
+    showmood_moodtracker();
+
 }
 
 void homescreen :: showmood_dashboard(){
@@ -546,30 +635,105 @@ void homescreen::on_DailyGoalsTable_doubleClicked(const QModelIndex &index)
 
 void homescreen::on_SadButton_clicked()
 {
+    showmood_moodtracker();
+    int count;
+    QSqlQuery qry,qry1,qry2,qry3;
+
     QString mood_table = current_user + "_mood";
-    QSqlQuery qry1;
+    QString current_date, last_date;
+    QStringList lastdatelist;
+
     QDateTime clock = QDateTime::currentDateTime();
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
-    qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) "
-                 "VALUES (:dates, :mood)");
-    qry1.bindValue(":dates", clock_text);
-    qry1.bindValue(":mood", "Sad");
-    qry1.exec();
+    current_date = clock.toString("ddMMyyyy");
+
+    qry.prepare("select count(*) from '"+mood_table+"'");
+    qry.exec();
+    qry.next();
+    count = qry.value(0).toInt();
+
+    if (count!=0){
+        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        qry3.exec();
+        qry3.next();
+
+        lastdatelist =  qry3.value(0).toString().split(" ").mid(1,3);
+        last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
+
+        qDebug() << lastdatelist << last_date << current_date;
+
+        if (current_date != last_date){
+        qry2.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry2.bindValue(":dates", clock_text);
+        qry2.bindValue(":mood", "Sad");
+        qry2.next();
+        qry2.exec();
+        }
+        else{
+            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+        }
+    }
+    else {
+        qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry1.bindValue(":dates", clock_text);
+        qry1.bindValue(":mood", "Sad");
+        qry1.next();
+        qry1.exec();
+    }
     on_MoodTrackerButton_clicked();
+    showmood_moodtracker();
 }
 
 
 void homescreen::on_AngryButton_clicked()
 {
+    showmood_moodtracker();
+    int count;
+    QSqlQuery qry,qry1,qry2,qry3;
+
     QString mood_table = current_user + "_mood";
-    QSqlQuery qry1;
+    QString current_date, last_date;
+    QStringList lastdatelist;
+
     QDateTime clock = QDateTime::currentDateTime();
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
-    qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) "
-                 "VALUES (:dates, :mood)");
-    qry1.bindValue(":dates", clock_text);
-    qry1.bindValue(":mood", "Angry");
-    qry1.exec();
+    current_date = clock.toString("ddMMyyyy");
+
+    qry.prepare("select count(*) from '"+mood_table+"'");
+    qry.exec();
+    qry.next();
+    count = qry.value(0).toInt();
+
+    if (count!=0){
+        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        qry3.exec();
+        qry3.next();
+
+        lastdatelist =  qry3.value(0).toString().split(" ").mid(1,3);
+        last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
+
+        qDebug() << lastdatelist << last_date << current_date;
+
+        if (current_date != last_date){
+        qry2.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry2.bindValue(":dates", clock_text);
+        qry2.bindValue(":mood", "Angry");
+        qry2.next();
+        qry2.exec();
+        }
+        else{
+            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+        }
+    }
+    else {
+        qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
+        qry1.bindValue(":dates", clock_text);
+        qry1.bindValue(":mood", "Angry");
+        qry1.next();
+        qry1.exec();
+    }
     on_MoodTrackerButton_clicked();
+    showmood_moodtracker();
+
 }
 
