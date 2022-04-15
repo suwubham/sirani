@@ -356,21 +356,21 @@ void homescreen::on_SleepTrackerSubmitButton_clicked()
     QString sleep_table = current_user + "_sleep";
     QSqlQuery qry,qry1,qry2,qry3;
     int hours = ui -> SleepEnterArea -> text().toInt();
-    int count;
+    int count=0;
     QString current_date, last_date;
     QStringList lastdatelist;
+
     QDateTime clock = QDateTime::currentDateTime();
     clock = clock.addDays(-1);
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
     current_date = clock.toString("ddMMyyyy");
-
 
     qry.prepare("select count(*) from '"+sleep_table+"'");
     qry.exec();
     qry.next();
     count = qry.value(0).toInt();
 
-    if (count ==0){
+    if (count == 0){
     qry1.prepare("INSERT INTO '"+sleep_table+"' (date, hours) "
                  "VALUES (:dates, :hour)");
     qry1.bindValue(":dates", clock_text);
@@ -379,14 +379,16 @@ void homescreen::on_SleepTrackerSubmitButton_clicked()
     }
 
     else {
-        qry3.prepare("SELECT * FROM '"+sleep_table+"' ORDER BY date DESC LIMIT 1");
+        int off = count - 1;
+        qry3.prepare("SELECT * FROM '"+sleep_table+"' LIMIT 1 OFFSET :offsetvalue");
+        qry3.bindValue(":offsetvalue",off);
         qry3.exec();
         qry3.next();
 
         lastdatelist =  qry3.value(0).toString().split(" ").mid(1,3);
         last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
 
-        qDebug() << lastdatelist << last_date << current_date;
+        qDebug() << lastdatelist << last_date << current_date << count;
 
         if (current_date != last_date){
             qry2.prepare("INSERT INTO '"+sleep_table+"' (date, hours) "
@@ -432,7 +434,9 @@ void homescreen::on_HappyButton_clicked()
     count = qry.value(0).toInt();
 
     if (count!=0){
-        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        int off = count - 1;
+        qry3.prepare("SELECT * FROM '"+mood_table+"' LIMIT 1 OFFSET :offsetvalue");
+        qry3.bindValue(":offsetvalue",off);
         qry3.exec();
         qry3.next();
 
@@ -483,7 +487,9 @@ void homescreen::on_CalmButton_clicked()
     count = qry.value(0).toInt();
 
     if (count!=0){
-        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        int off = count - 1;
+        qry3.prepare("SELECT * FROM '"+mood_table+"' LIMIT 1 OFFSET :offsetvalue");
+        qry3.bindValue(":offsetvalue",off);
         qry3.exec();
         qry3.next();
 
@@ -656,7 +662,9 @@ void homescreen::on_SadButton_clicked()
     count = qry.value(0).toInt();
 
     if (count!=0){
-        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        int off = count - 1;
+        qry3.prepare("SELECT * FROM '"+mood_table+"' LIMIT 1 OFFSET :offsetvalue");
+        qry3.bindValue(":offsetvalue",off);
         qry3.exec();
         qry3.next();
 
@@ -708,7 +716,9 @@ void homescreen::on_AngryButton_clicked()
     count = qry.value(0).toInt();
 
     if (count!=0){
-        qry3.prepare("SELECT * FROM '"+mood_table+"' ORDER BY date DESC LIMIT 1");
+        int off = count - 1;
+        qry3.prepare("SELECT * FROM '"+mood_table+"' LIMIT 1 OFFSET :offsetvalue");
+        qry3.bindValue(":offsetvalue",off);
         qry3.exec();
         qry3.next();
 
