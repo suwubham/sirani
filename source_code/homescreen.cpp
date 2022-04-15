@@ -85,7 +85,7 @@ void homescreen :: showsleep_dashboard(){
     chart -> addSeries(series);
     chart -> legend() -> hide();
     chart -> setTitle("Sleep record");
-    chart -> setTheme(QChart::ChartThemeHighContrast);
+    chart -> setTheme(QChart::ChartThemeBrownSand);
 
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
@@ -149,7 +149,7 @@ void homescreen :: showsleep_sleeptracker(){
     chart -> addSeries(series);
     chart -> legend() -> hide();
     chart -> setTitle("Sleep record");
-    chart -> setTheme(QChart::ChartThemeHighContrast);
+    chart -> setTheme(QChart::ChartThemeBrownSand);
 
     QDateTimeAxis *axisX = new QDateTimeAxis;
     axisX->setFormat("dd MMM");
@@ -169,6 +169,9 @@ void homescreen :: showsleep_sleeptracker(){
     chart -> setAnimationOptions(QChart::GridAxisAnimations);
     chart -> setAnimationOptions(QChart::SeriesAnimations);
     chart -> setAnimationEasingCurve(QEasingCurve::OutCubic);
+    chart -> setPlotArea(QRectF(50,40,525,245));
+    chart->setMargins(QMargins(0, 0, 0, 0));
+
 
     QChartView *chartView = new QChartView(chart);
     chartView -> setRenderHint(QPainter::Antialiasing);
