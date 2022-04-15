@@ -103,7 +103,7 @@ background-color: #FEFAF1;
        </spacer>
       </item>
       <item row="1" column="0" colspan="2">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="SignUpTitle">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -135,7 +135,7 @@ background: transparent ;
        </spacer>
       </item>
       <item row="3" column="0">
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="FName">
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -146,7 +146,7 @@ color: #3C465F;</string>
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="LName">
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -189,7 +189,7 @@ border-radius: 4px;</string>
        </widget>
       </item>
       <item row="5" column="0" colspan="2">
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="UName">
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -216,7 +216,7 @@ border-radius: 4px;</string>
        </widget>
       </item>
       <item row="7" column="0" colspan="2">
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="Email">
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -243,7 +243,7 @@ border-radius: 4px;</string>
        </widget>
       </item>
       <item row="9" column="0" colspan="2">
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="PW">
         <property name="styleSheet">
          <string notr="true">font: 12pt &quot;Foco&quot;;
 color: #3C465F;</string>
@@ -320,7 +320,7 @@ color: #FEFAF1;}</string>
        </spacer>
       </item>
       <item row="14" column="0" colspan="2">
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="DBConnStatus">
         <property name="font">
          <font>
           <pointsize>7</pointsize>

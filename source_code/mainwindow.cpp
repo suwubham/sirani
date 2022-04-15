@@ -9,9 +9,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     if(!connOpen())
-        ui->label_3->setText("Failed");
+        ui->DBConnStatus->setText("Failed");
     else
-        ui->label_3->setText("Connected");
+        ui->DBConnStatus->setText("Connected");
 }
 
 MainWindow::~MainWindow()
@@ -22,7 +22,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_SignUpButton_clicked()
 {
     signup = new signup_page(this);
     signup -> show();
