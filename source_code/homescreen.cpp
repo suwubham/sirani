@@ -105,6 +105,8 @@ void homescreen :: showsleep_dashboard(){
     chart -> setAnimationOptions(QChart::GridAxisAnimations);
     chart -> setAnimationOptions(QChart::SeriesAnimations);
     chart -> setAnimationEasingCurve(QEasingCurve::OutCubic);
+    chart -> setPlotArea(QRectF(50,40,550,160));
+    chart -> setMargins(QMargins(0, 0, 0, 0));
 
     QChartView *chartView = new QChartView(chart);
     chartView -> setRenderHint(QPainter::Antialiasing);
@@ -218,7 +220,12 @@ void homescreen :: showmood_moodtracker(){
     QChart *chart = new QChart();
     chart -> addSeries(series);
     chart-> setTitle("Mood frequency");
+
     chart -> setAnimationOptions(QChart::SeriesAnimations);
+    chart -> setPlotArea(QRectF(40,40,550,160));
+     chart->setMargins(QMargins(0, 0, 0, 0));
+    chart->legend()->setVisible(false);
+
 
     QStringList categories;
     categories << "Happy" << "Sad" << "Calm" << "Angry";
@@ -256,27 +263,32 @@ void homescreen::on_MoodTrackerButton_clicked()
     ui -> stackedWidget -> setCurrentIndex(2);
 
     if(happy>sad && happy>calm && happy>angry){
-        current_mood = "Happy";
+        current_mood = "H A P P Y";
+        mood_resource = "- Practice mindfulness\n- Enjoy some green time\n- List something you are grateful about";
     }
 
     else if(sad>happy && sad>calm && sad>angry){
-        current_mood = "Sad";
+        current_mood = "S A D";
+        mood_resource = "- Engage in a hobby\n- Do something you enjoy\n- Focus on the positive";
     }
 
     else if(calm>sad && happy<calm && calm>angry){
-        current_mood = "Calm";
+        current_mood = "C A L M";
+        mood_resource = "- Be ready for challenges\n- Create an action plan\n- Write in a journal";
     }
 
     else if(angry>sad && angry>calm && happy<angry){
-        current_mood = "Angry";
+        current_mood = "A N G R Y";
+        mood_resource = "- Use humor to release tension\n- Take a timeout\n- Identify possible solutions";
     }
 
     else{
         current_mood = "Mixed Feelings";
+        mood_resource = "- Practice Mindfulness\n- Focus on the positive\n- Write in a journal";
     }
 
     ui -> AverageMood -> setText(current_mood);
-
+    ui -> MoodResource -> setText(mood_resource);
 
 }
 
@@ -563,6 +575,9 @@ void homescreen :: showmood_dashboard(){
     chart -> addSeries(series);
     chart-> setTitle("Mood frequency");
     chart -> setAnimationOptions(QChart::SeriesAnimations);
+    chart -> setPlotArea(QRectF(40,40,550,160));
+    chart->setMargins(QMargins(0, 0, 0, 0));
+    chart->legend()->setVisible(false);
 
     QStringList categories;
     categories << "Happy" << "Sad" << "Calm" << "Angry";
