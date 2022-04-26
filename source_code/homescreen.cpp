@@ -105,7 +105,7 @@ void homescreen :: showsleep_dashboard(){
     chart -> setAnimationOptions(QChart::GridAxisAnimations);
     chart -> setAnimationOptions(QChart::SeriesAnimations);
     chart -> setAnimationEasingCurve(QEasingCurve::OutCubic);
-    chart -> setPlotArea(QRectF(50,40,550,160));
+    chart -> setPlotArea(QRectF(50,30,550,120));
     chart -> setMargins(QMargins(0, 0, 0, 0));
 
     QChartView *chartView = new QChartView(chart);
@@ -575,7 +575,7 @@ void homescreen :: showmood_dashboard(){
     chart -> addSeries(series);
     chart-> setTitle("Mood frequency");
     chart -> setAnimationOptions(QChart::SeriesAnimations);
-    chart -> setPlotArea(QRectF(40,40,550,160));
+    chart -> setPlotArea(QRectF(50,40,550,120));
     chart->setMargins(QMargins(0, 0, 0, 0));
     chart->legend()->setVisible(false);
 
