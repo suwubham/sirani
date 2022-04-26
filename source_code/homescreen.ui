@@ -396,10 +396,10 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="Dashboard">
-          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1,0,7">
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
            <item>
             <widget class="QLabel" name="WelcomeUser">
              <property name="styleSheet">
@@ -422,38 +422,138 @@ font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:30pt; color:#FF6768; ba
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="label_5">
-             <property name="styleSheet">
-              <string notr="true">font: 800 11pt &quot;Foco&quot;;
-color: rgb(60, 70, 95);</string>
+            <spacer name="horizontalSpacer_18">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
              </property>
-             <property name="text">
-              <string>Your sleep chart : </string>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
              </property>
-            </widget>
+            </spacer>
            </item>
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_11" stretch="1,0,1">
+            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,0,1">
              <item>
-              <widget class="QFrame" name="horizontalFrame">
-               <layout class="QHBoxLayout" name="horizontalLayout_7"/>
-              </widget>
+              <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0,1,0,0,1">
+               <item>
+                <widget class="QLabel" name="label_5">
+                 <property name="styleSheet">
+                  <string notr="true">font: 800 12pt &quot;Foco&quot;;
+color: #B49D74;</string>
+                 </property>
+                 <property name="text">
+                  <string>Your Sleep Chart</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="horizontalFrame">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: #FFF6E3
+</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_8"/>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_19">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="styleSheet">
+                  <string notr="true">font: 800 12pt &quot;Foco&quot;;
+color: #B49D74;</string>
+                 </property>
+                 <property name="text">
+                  <string>Your Mood Chart</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="horizontalFrame_4">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: #FFF6E3;
+</string>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_9"/>
+                </widget>
+               </item>
+              </layout>
              </item>
              <item>
-              <widget class="QLabel" name="label_4">
-               <property name="styleSheet">
-                <string notr="true">font: 800 11pt &quot;Foco&quot;;
-color: rgb(60, 70, 95);</string>
+              <spacer name="verticalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
                </property>
-               <property name="text">
-                <string>Your mood chart :</string>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
                </property>
-              </widget>
+              </spacer>
              </item>
              <item>
-              <widget class="QFrame" name="horizontalFrame_4">
-               <layout class="QHBoxLayout" name="horizontalLayout_9"/>
-              </widget>
+              <layout class="QVBoxLayout" name="verticalLayout_13" stretch="0,1">
+               <item>
+                <spacer name="horizontalSpacer_20">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_6">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 179, 145);
+ background-position: bottom;
+background-image: url(:/IMG/dashboardbg-05.png);
+background-repeat: repeat-x;
+font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:18pt; color:#FEFAF1; </string>
+                 </property>
+                 <property name="text">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;It is okay&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;to not be&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;O K A Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </item>
             </layout>
            </item>
@@ -1013,8 +1113,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>560</width>
-                <height>321</height>
+                <width>293</width>
+                <height>207</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,2">
@@ -1225,8 +1325,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>560</width>
-                <height>360</height>
+                <width>78</width>
+                <height>61</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
