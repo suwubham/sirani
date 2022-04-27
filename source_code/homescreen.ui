@@ -99,7 +99,6 @@ border-radius: 15px;</string>
         <widget class="QLabel" name="Sirani">
          <property name="font">
           <font>
-           <family>FONTSPRING DEMO - Pontiac Black</family>
            <pointsize>30</pointsize>
            <italic>false</italic>
            <bold>true</bold>
@@ -211,6 +210,36 @@ font: 11pt &quot;Foco&quot;;}</string>
          </property>
         </spacer>
        </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QPushButton" name="SleepTrackerButton">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+#SleepTrackerButton:hover{
+color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
+#SleepTrackerButton{color:rgb(254, 250, 241);
+font: 11pt &quot;Foco&quot;;}</string>
+         </property>
+         <property name="text">
+          <string>   Sleep Tracker</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/IMG/night icon-02.png</normaloff>:/IMG/night icon-02.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
        <item row="8" column="0" colspan="2">
         <spacer name="horizontalSpacer_5">
          <property name="orientation">
@@ -228,7 +257,6 @@ font: 11pt &quot;Foco&quot;;}</string>
         <widget class="QPushButton" name="MoodTrackerButton">
          <property name="font">
           <font>
-           <family>Foco</family>
            <pointsize>11</pointsize>
            <italic>false</italic>
            <bold>false</bold>
@@ -307,7 +335,7 @@ font: 11pt &quot;Foco&quot;;}</string>
          <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
-           <height>200</height>
+           <height>50</height>
           </size>
          </property>
         </spacer>
@@ -334,6 +362,21 @@ font: 11pt &quot;Foco&quot;;}</string>
          </property>
         </widget>
        </item>
+       <item row="15" column="1">
+        <widget class="QPushButton" name="LogoutButton">
+         <property name="styleSheet">
+          <string notr="true">
+#LogoutButton:hover{
+color: #fc3a3a;font: 800 12pt &quot;Foco&quot;;}
+
+#LogoutButton{color:rgb(254, 250, 241);
+font: 11pt &quot;Foco&quot;;}</string>
+         </property>
+         <property name="text">
+          <string>Log Out</string>
+         </property>
+        </widget>
+       </item>
        <item row="14" column="1">
         <spacer name="horizontalSpacer_9">
          <property name="orientation">
@@ -342,40 +385,10 @@ font: 11pt &quot;Foco&quot;;}</string>
          <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
-           <height>10</height>
+           <height>30</height>
           </size>
          </property>
         </spacer>
-       </item>
-       <item row="7" column="0" colspan="2">
-        <widget class="QPushButton" name="SleepTrackerButton">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">
-#SleepTrackerButton:hover{
-color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
-#SleepTrackerButton{color:rgb(254, 250, 241);
-font: 11pt &quot;Foco&quot;;}</string>
-         </property>
-         <property name="text">
-          <string>   Sleep Tracker</string>
-         </property>
-         <property name="icon">
-          <iconset resource="resource.qrc">
-           <normaloff>:/IMG/night icon-02.png</normaloff>:/IMG/night icon-02.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>24</width>
-           <height>24</height>
-          </size>
-         </property>
-        </widget>
        </item>
       </layout>
      </widget>
@@ -396,7 +409,7 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="Dashboard">
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
@@ -1113,8 +1126,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>293</width>
-                <height>207</height>
+                <width>522</width>
+                <height>307</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,2">
@@ -1325,8 +1338,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>78</width>
-                <height>61</height>
+                <width>527</width>
+                <height>338</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
