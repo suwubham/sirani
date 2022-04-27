@@ -25,6 +25,7 @@ public:
     explicit homescreen(QWidget *parent = nullptr);
     QString current_user;
     QString current_mood;
+    QString mood_resource;
     ~homescreen();
 
 private slots:

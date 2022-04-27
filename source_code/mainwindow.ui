@@ -127,6 +127,7 @@ background-color: #FEFAF1;
          </property>
          <property name="font">
           <font>
+           <family>FONTSPRING DEMO - Pontiac Black</family>
            <pointsize>30</pointsize>
            <italic>false</italic>
            <bold>true</bold>
@@ -237,7 +238,7 @@ color: #3C465F;</string>
 border-radius: 4px;</string>
          </property>
          <property name="echoMode">
-          <enum>QLineEdit::PasswordEchoOnEdit</enum>
+          <enum>QLineEdit::Password</enum>
          </property>
         </widget>
        </item>
@@ -273,10 +274,14 @@ border-radius: 4px;</string>
          </property>
          <property name="font">
           <font>
+           <family>Foco</family>
            <pointsize>12</pointsize>
            <italic>false</italic>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -335,10 +340,14 @@ color: #3C465F;</string>
         <widget class="QPushButton" name="SignUpButton">
          <property name="font">
           <font>
+           <family>Foco</family>
            <pointsize>13</pointsize>
            <italic>false</italic>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">#SignUpButton{text-align: left;

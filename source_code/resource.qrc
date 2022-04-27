@@ -12,5 +12,11 @@
         <file>bg clock-04.png</file>
         <file>bgresource-05-05.png</file>
         <file>bgsleeptracker-05.png</file>
+        <file>calm-06.png</file>
+        <file>happy-06.png</file>
+        <file>moodtrackerbg-05.png</file>
+        <file>angry-06.png</file>
+        <file>sad-06.png</file>
+        <file>dashboardbg-05.png</file>
     </qresource>
 </RCC>
