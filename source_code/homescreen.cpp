@@ -1,4 +1,5 @@
 #include "homescreen.h"
+#include "mainwindow.h"
 #include "ui_homescreen.h"
 #include<QTimer>
 #include<QDateTime>
@@ -377,6 +378,13 @@ void homescreen::on_SleepTrackerSubmitButton_clicked()
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
     current_date = clock.toString("ddMMyyyy");
 
+
+    if (hours==NULL) {
+            QMessageBox::information (this,"message","cannot submit empty value");
+    }
+
+
+    else {
     qry.prepare("select count(*) from '"+sleep_table+"'");
     qry.exec();
     qry.next();
@@ -410,9 +418,11 @@ void homescreen::on_SleepTrackerSubmitButton_clicked()
             qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
         }
     }
+    }
+    ui -> SleepEnterArea -> setText("");
     on_SleepTrackerButton_clicked();
 }
 
@@ -465,7 +475,7 @@ void homescreen::on_HappyButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
         }
     }
     else {
@@ -518,7 +528,7 @@ void homescreen::on_CalmButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
         }
     }
     else {
@@ -599,12 +609,20 @@ void homescreen::on_GoalsSubmitButton_clicked()
     QString goal = ui -> GoalEnterArea -> text();
     QDateTime clock = QDateTime::currentDateTime();
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
+
+    if (goal.isEmpty()) {
+        QMessageBox::information (this,"message","cannot submit empty value");
+    }
+
+    else {
     qry1.prepare("INSERT INTO '"+goal_table+"' (date, type, goal) "
                  "VALUES (:dates, :types, :goals)");
     qry1.bindValue(":dates", clock_text);
     qry1.bindValue(":types", type);
     qry1.bindValue(":goals", goal);
     qry1.exec();
+    }
+    ui ->GoalEnterArea -> setText("");
     on_GoalsButton_clicked();
 }
 
@@ -696,7 +714,7 @@ void homescreen::on_SadButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
         }
     }
     else {
@@ -750,7 +768,7 @@ void homescreen::on_AngryButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","error",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
         }
     }
     else {
@@ -763,5 +781,18 @@ void homescreen::on_AngryButton_clicked()
     on_MoodTrackerButton_clicked();
     showmood_moodtracker();
 
+}
+
+
+void homescreen::on_LogoutButton_clicked()
+{
+
+    QMessageBox::StandardButton reply= QMessageBox::question(this,"Message","Do you want to log out?",QMessageBox::Yes | QMessageBox::No);
+    if (reply == QMessageBox::Yes){
+        this -> hide();
+        MainWindow *mw;
+        mw = new MainWindow();
+        mw -> show();
+    }
 }
 
