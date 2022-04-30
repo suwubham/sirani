@@ -99,6 +99,7 @@ border-radius: 15px;</string>
         <widget class="QLabel" name="Sirani">
          <property name="font">
           <font>
+           <family>FONTSPRING DEMO - Pontiac Black</family>
            <pointsize>30</pointsize>
            <italic>false</italic>
            <bold>true</bold>
@@ -257,6 +258,7 @@ font: 11pt &quot;Foco&quot;;}</string>
         <widget class="QPushButton" name="MoodTrackerButton">
          <property name="font">
           <font>
+           <family>Foco</family>
            <pointsize>11</pointsize>
            <italic>false</italic>
            <bold>false</bold>
@@ -327,7 +329,7 @@ font: 11pt &quot;Foco&quot;;}</string>
          </property>
         </widget>
        </item>
-       <item row="12" column="0" colspan="2">
+       <item row="14" column="0" colspan="2">
         <spacer name="horizontalSpacer_7">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -335,12 +337,12 @@ font: 11pt &quot;Foco&quot;;}</string>
          <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
-           <height>50</height>
+           <height>200</height>
           </size>
          </property>
         </spacer>
        </item>
-       <item row="13" column="1">
+       <item row="15" column="1">
         <widget class="QLabel" name="Clock">
          <property name="font">
           <font>
@@ -362,22 +364,7 @@ font: 11pt &quot;Foco&quot;;}</string>
          </property>
         </widget>
        </item>
-       <item row="15" column="1">
-        <widget class="QPushButton" name="LogoutButton">
-         <property name="styleSheet">
-          <string notr="true">
-#LogoutButton:hover{
-color: #fc3a3a;font: 800 12pt &quot;Foco&quot;;}
-
-#LogoutButton{color:rgb(254, 250, 241);
-font: 11pt &quot;Foco&quot;;}</string>
-         </property>
-         <property name="text">
-          <string>Log Out</string>
-         </property>
-        </widget>
-       </item>
-       <item row="14" column="1">
+       <item row="16" column="1">
         <spacer name="horizontalSpacer_9">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -385,7 +372,45 @@ font: 11pt &quot;Foco&quot;;}</string>
          <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
-           <height>30</height>
+           <height>10</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="13" column="0" colspan="2">
+        <widget class="QPushButton" name="LogoutButton">
+         <property name="styleSheet">
+          <string notr="true">
+#LogoutButton:hover{
+color: rgb(254, 250, 241);;font: 800 14pt &quot;Foco&quot;;}
+
+#LogoutButton{color:rgb(254, 250, 241);
+font: 11pt &quot;Foco&quot;;}</string>
+         </property>
+         <property name="text">
+          <string>   Log Out           </string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/IMG/logout-07.png</normaloff>:/IMG/logout-07.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>25</width>
+           <height>25</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="0" colspan="2">
+        <spacer name="horizontalSpacer_21">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>15</height>
           </size>
          </property>
         </spacer>
@@ -409,7 +434,7 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>2</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="Dashboard">
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
@@ -573,7 +598,7 @@ font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:18pt; color:#FEFAF1; </
           </layout>
          </widget>
          <widget class="QWidget" name="Goals">
-          <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0">
+          <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,1,1">
            <item>
             <widget class="QLabel" name="GoalTitle">
              <property name="styleSheet">
@@ -585,9 +610,22 @@ font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:18pt; color:#FEFAF1; </
             </widget>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="main_div" stretch="5,5">
+            <spacer name="horizontalSpacer_22">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="main_div" stretch="2,3">
              <item>
-              <layout class="QVBoxLayout" name="enter_area" stretch="0,0,0,0,0,6">
+              <layout class="QVBoxLayout" name="enter_area" stretch="0,0,0,0,0,0,0,6">
                <property name="spacing">
                 <number>20</number>
                </property>
@@ -610,12 +648,18 @@ font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:18pt; color:#FEFAF1; </
 color: rgb(60, 70, 95);</string>
                  </property>
                  <property name="text">
-                  <string>What do you want to get done?</string>
+                  <string>Add Your Goal:</string>
                  </property>
                 </widget>
                </item>
                <item>
                 <widget class="QLineEdit" name="GoalEnterArea">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>25</height>
+                  </size>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">border-width: 1px;
      border-style: solid;
@@ -624,6 +668,19 @@ border-radius: 4px;
 background-color:#FEFAF1;</string>
                  </property>
                 </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_23">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
                <item>
                 <widget class="QLabel" name="GoalsType">
@@ -637,7 +694,34 @@ color: rgb(60, 70, 95);</string>
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="comboBox"/>
+                <widget class="QComboBox" name="comboBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox { border-width: 1px;
+     border-style: solid;
+     border-color: #898479;
+border-radius: 4px;
+background-color:#FEFAF1;}</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_24">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
                <item>
                 <widget class="QPushButton" name="GoalsSubmitButton">
@@ -669,57 +753,133 @@ color:#FF6768 ;}</string>
               </layout>
              </item>
              <item>
-              <widget class="QTabWidget" name="tabWidget">
+              <widget class="QFrame" name="frame_6">
                <property name="styleSheet">
-                <string notr="true">font: 800 11pt &quot;Foco&quot;;
-color: rgb(60, 70, 95);</string>
+                <string notr="true">#frame_6{border-width: 2px;
+     border-style: solid;
+     border-color:  #B49D74;
+border-radius: 10px;
+background-color:#FEFAF1;}</string>
                </property>
-               <property name="currentIndex">
-                <number>3</number>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-               <widget class="QWidget" name="Yearly">
-                <attribute name="title">
-                 <string>Yearly</string>
-                </attribute>
-                <layout class="QVBoxLayout" name="verticalLayout_9">
-                 <item>
-                  <widget class="QTableView" name="YearlyGoalsTable"/>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="Monthly">
-                <attribute name="title">
-                 <string>Monthly</string>
-                </attribute>
-                <layout class="QHBoxLayout" name="horizontalLayout_13">
-                 <item>
-                  <widget class="QTableView" name="MonthlyGoalsTable"/>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="Weekly">
-                <attribute name="title">
-                 <string>Weekly</string>
-                </attribute>
-                <layout class="QHBoxLayout" name="horizontalLayout_15">
-                 <item>
-                  <widget class="QTableView" name="WeeklyGoalsTable"/>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="Daily">
-                <attribute name="title">
-                 <string>Daily</string>
-                </attribute>
-                <layout class="QVBoxLayout" name="verticalLayout_10">
-                 <item>
-                  <widget class="QTableView" name="DailyGoalsTable"/>
-                 </item>
-                </layout>
-               </widget>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_9">
+                <item>
+                 <widget class="QTabWidget" name="tabWidget">
+                  <property name="currentIndex">
+                   <number>3</number>
+                  </property>
+                  <widget class="QWidget" name="Daily">
+                   <attribute name="title">
+                    <string>Daily</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_10">
+                    <item>
+                     <widget class="QTableView" name="DailyGoalsTable">
+                      <property name="styleSheet">
+                       <string notr="true">  QTableView {
+        background-color: transparent;
+	font: 9pt &quot;Foco&quot;; 
+gridline-color: #b49c73;      
+}
+QHeaderView {font: 800 11pt &quot;Foco&quot;; color:#3C465F}
+QHeaderView::section { background-color:transparent;}
+QTableView QTableCornerButton::section{ background-color:transparent;}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Weekly">
+                   <attribute name="title">
+                    <string>Weekly</string>
+                   </attribute>
+                   <layout class="QHBoxLayout" name="horizontalLayout_10">
+                    <item>
+                     <widget class="QTableView" name="WeeklyGoalsTable">
+                      <property name="styleSheet">
+                       <string notr="true">  QTableView {
+        background-color: transparent;
+	font: 9pt &quot;Foco&quot;; 
+gridline-color: #b49c73;      
+}
+QHeaderView {font: 800 11pt &quot;Foco&quot;; color:#3C465F}
+QHeaderView::section { background-color:transparent;}
+QTableView QTableCornerButton::section{ background-color:transparent;}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Monthly">
+                   <attribute name="title">
+                    <string>Monthly</string>
+                   </attribute>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <item>
+                     <widget class="QTableView" name="MonthlyGoalsTable">
+                      <property name="styleSheet">
+                       <string notr="true">  QTableView {
+        background-color: transparent;
+	font: 9pt &quot;Foco&quot;; 
+gridline-color: #b49c73;      
+}
+QHeaderView {font: 800 11pt &quot;Foco&quot;; color:#3C465F}
+QHeaderView::section { background-color:transparent;}
+QTableView QTableCornerButton::section{ background-color:transparent;}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="Yearly">
+                   <attribute name="title">
+                    <string>Yearly</string>
+                   </attribute>
+                   <layout class="QHBoxLayout" name="horizontalLayout_11">
+                    <item>
+                     <widget class="QTableView" name="YearlyGoalsTable">
+                      <property name="styleSheet">
+                       <string notr="true">  QTableView {
+        background-color: transparent;
+	font: 9pt &quot;Foco&quot;; 
+gridline-color: #b49c73;      
+}
+QHeaderView {font: 800 11pt &quot;Foco&quot;; color:#3C465F}
+QHeaderView::section { background-color:transparent;}
+QTableView QTableCornerButton::section{ background-color:transparent;}</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_7">
+             <property name="styleSheet">
+              <string notr="true">background-image: url(:/IMG/goalsbg-05.png);stretch:(0,0);
+background-repeat: repeat-x;
+background-position:bottom;
+</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_11"/>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -1126,8 +1286,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>522</width>
-                <height>307</height>
+                <width>376</width>
+                <height>237</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,2">
@@ -1338,8 +1498,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>527</width>
-                <height>338</height>
+                <width>80</width>
+                <height>80</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
