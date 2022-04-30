@@ -312,6 +312,7 @@ void homescreen::on_GoalsButton_clicked()
     modal -> setQuery(*qry);
     ui -> YearlyGoalsTable -> setModel(modal);
     ui -> YearlyGoalsTable -> resizeColumnsToContents();
+    ui->YearlyGoalsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui -> YearlyGoalsTable -> resizeRowsToContents();
 
     QSqlQueryModel *modal1 = new QSqlQueryModel();
@@ -321,6 +322,7 @@ void homescreen::on_GoalsButton_clicked()
     modal1 -> setQuery(*qry1);
     ui -> WeeklyGoalsTable -> setModel(modal1);
     ui -> WeeklyGoalsTable -> resizeColumnsToContents();
+    ui->WeeklyGoalsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui -> WeeklyGoalsTable -> resizeRowsToContents();
 
     QSqlQueryModel *modal2 = new QSqlQueryModel();
@@ -329,6 +331,7 @@ void homescreen::on_GoalsButton_clicked()
     qry2 -> exec();
     modal2 -> setQuery(*qry2);
     ui -> MonthlyGoalsTable -> setModel(modal2);
+    ui->MonthlyGoalsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui -> MonthlyGoalsTable -> resizeColumnsToContents();
     ui -> MonthlyGoalsTable -> resizeRowsToContents();
 
@@ -338,6 +341,7 @@ void homescreen::on_GoalsButton_clicked()
     qry3 -> exec();
     modal3 -> setQuery(*qry3);
     ui -> DailyGoalsTable -> setModel(modal3);
+    ui->DailyGoalsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui -> DailyGoalsTable -> resizeColumnsToContents();
     ui -> DailyGoalsTable -> resizeRowsToContents();
 
