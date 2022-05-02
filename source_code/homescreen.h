@@ -75,6 +75,8 @@ private slots:
 
     void on_LogoutButton_clicked();
 
+    void on_testbutton_clicked();
+
 private:
     Ui::homescreen *ui;
 };

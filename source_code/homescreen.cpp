@@ -5,6 +5,8 @@
 #include<QDateTime>
 #include <QDebug>
 #include<QMessageBox>
+#include <QUrl>
+#include<QDesktopServices>
 
 homescreen::homescreen(QWidget *parent) :
     QMainWindow(parent),
@@ -797,6 +799,16 @@ void homescreen::on_LogoutButton_clicked()
         MainWindow *mw;
         mw = new MainWindow();
         mw -> show();
+        QSqlQuery final;
+        final.prepare("delete from current_user");
+        final.exec();
     }
+}
+
+
+void homescreen::on_testbutton_clicked()
+{
+    QString testlink="https://screening.mhanational.org/screening-tools/";
+    QDesktopServices::openUrl(QUrl(testlink));
 }
 
