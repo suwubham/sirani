@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Sirani</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/IMG/sirani-03-03.png</normaloff>:/IMG/sirani-03-03.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(254, 250, 241);</string>
   </property>
@@ -99,6 +103,7 @@ border-radius: 15px;</string>
         <widget class="QLabel" name="Sirani">
          <property name="font">
           <font>
+           <family>FONTSPRING DEMO - Pontiac Black</family>
            <pointsize>30</pointsize>
            <italic>false</italic>
            <bold>true</bold>
@@ -140,6 +145,7 @@ font: 700 30pt &quot;FONTSPRING DEMO - Pontiac Black&quot;;</string>
          <property name="styleSheet">
           <string notr="true">#DashBoardButton:hover{
 color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
+
 #DashBoardButton{color:rgb(254, 250, 241);
 font: 11pt &quot;Foco&quot;;}</string>
          </property>
@@ -257,6 +263,7 @@ font: 11pt &quot;Foco&quot;;}</string>
         <widget class="QPushButton" name="MoodTrackerButton">
          <property name="font">
           <font>
+           <family>Foco</family>
            <pointsize>11</pointsize>
            <italic>false</italic>
            <bold>false</bold>
@@ -445,9 +452,6 @@ font: 11pt &quot;Foco&quot;;}</string>
          </property>
         </spacer>
        </item>
-       <item row="19" column="1">
-        <widget class="QCalendarWidget" name="calendarWidget"/>
-       </item>
       </layout>
      </widget>
     </item>
@@ -467,7 +471,7 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="Dashboard">
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
@@ -1319,8 +1323,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>522</width>
-                <height>307</height>
+                <width>842</width>
+                <height>353</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,2">
@@ -1531,8 +1535,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>105</width>
-                <height>105</height>
+                <width>842</width>
+                <height>403</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">

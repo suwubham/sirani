@@ -34,6 +34,10 @@
   <property name="windowTitle">
    <string>Sirani</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/IMG/sirani-03-03.png</normaloff>:/IMG/sirani-03-03.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">#centralwidget{
 background-repeat: repeat-y;
@@ -399,6 +403,8 @@ color: #FFB391;}</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Signup to sirani</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/IMG/sirani-03-03.png</normaloff>:/IMG/sirani-03-03.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">#signup_page{
 background-image: url(:/IMG/signup-02.png);
@@ -352,6 +356,8 @@ color: #FEFAF1;}</string>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
