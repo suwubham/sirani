@@ -416,7 +416,7 @@ font: 11pt &quot;Foco&quot;;}</string>
          <property name="sizeHint" stdset="0">
           <size>
            <width>40</width>
-           <height>20</height>
+           <height>200</height>
           </size>
          </property>
         </spacer>
@@ -475,7 +475,7 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <widget class="QWidget" name="Dashboard">
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
@@ -666,7 +666,7 @@ font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:18pt; color:#FEFAF1; </
            <item>
             <layout class="QHBoxLayout" name="main_div" stretch="2,3">
              <item>
-              <layout class="QVBoxLayout" name="enter_area" stretch="0,0,0,0,0,0,0,6">
+              <layout class="QVBoxLayout" name="enter_area" stretch="0,0,0,0,0,0,0,6,0">
                <property name="spacing">
                 <number>20</number>
                </property>
@@ -790,6 +790,17 @@ color:#FF6768 ;}</string>
                   </size>
                  </property>
                 </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_7">
+                 <property name="styleSheet">
+                  <string notr="true">font: 800 9pt &quot;Foco&quot;;
+color: #FFB391;</string>
+                 </property>
+                 <property name="text">
+                  <string>! Double click the goal to mark it as complete</string>
+                 </property>
+                </widget>
                </item>
               </layout>
              </item>
@@ -1327,8 +1338,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>471</width>
-                <height>307</height>
+                <width>293</width>
+                <height>207</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,2">
@@ -1539,8 +1550,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>105</width>
-                <height>105</height>
+                <width>78</width>
+                <height>61</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
