@@ -38,7 +38,7 @@ homescreen::homescreen(QWidget *parent) :
 void homescreen :: Date_Time()
 {
     QDateTime clock = QDateTime::currentDateTime();
-    QString clock_text=clock.toString("ddd - dd / MM / yyyy  \n\nh : mm : ss ap");
+    QString clock_text=clock.toString("ddd - dd / MM / yyyy  \n\nh : m : ss ap");
     ui -> Clock -> setText(clock_text);
 }
 
