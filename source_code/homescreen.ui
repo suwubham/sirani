@@ -318,7 +318,11 @@ color: #FEFAF1;font: 800 14pt &quot;Foco&quot;;}
 font: 11pt &quot;Foco&quot;;}</string>
          </property>
          <property name="text">
-          <string>Take a Test</string>
+          <string>   Take a Test     </string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/IMG/test_icon.png</normaloff>:/IMG/test_icon.png</iconset>
          </property>
         </widget>
        </item>
@@ -1323,8 +1327,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>842</width>
-                <height>353</height>
+                <width>471</width>
+                <height>307</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,2">
@@ -1535,8 +1539,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>842</width>
-                <height>403</height>
+                <width>105</width>
+                <height>105</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">
