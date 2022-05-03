@@ -619,10 +619,10 @@ color: #B49D74;</string>
  background-position: bottom;
 background-image: url(:/IMG/dashboardbg-05.png);
 background-repeat: repeat-x;
-font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:18pt; color:#FEFAF1; </string>
+font-family:'FONTSPRING DEMO - Pontiac Black'; font-size:24pt; color:#FEFAF1; </string>
                  </property>
                  <property name="text">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;It is okay&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;to not be&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;O K A Y&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  <string>It is okay &lt;br&gt; to not be &lt;br&gt; okay</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>

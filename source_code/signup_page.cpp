@@ -97,6 +97,7 @@ void signup_page::on_button_signup_clicked()
             qry2.prepare("CREATE TABLE '"+goal_tablename+"' (date INTEGER, type text, goal text)");
             qry2.exec();
             connClose();
+            this->hide();
         }
     }
 }
