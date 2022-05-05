@@ -642,7 +642,7 @@ void homescreen :: showmood_dashboard(){
     chart-> setTitle("Mood frequency");
 
     chart -> setAnimationOptions(QChart::SeriesAnimations);
-    chart -> setPlotArea(QRectF(40,40,550,160));
+    chart -> setPlotArea(QRectF(40,40,550,130));
      chart->setMargins(QMargins(0, 0, 0, 0));
     chart->legend()->setVisible(false);
 
