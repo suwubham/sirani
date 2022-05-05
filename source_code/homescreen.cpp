@@ -51,7 +51,7 @@ homescreen::homescreen(QWidget *parent) :
 void homescreen :: Date_Time()
 {
     QDateTime clock = QDateTime::currentDateTime();
-    QString clock_text=clock.toString("ddd - dd / MM / yyyy  \n\nh : m : ss ap");
+    QString clock_text=clock.toString("ddd - dd / MM / yyyy  \n\nh : mm : ss ap");
     ui -> Clock -> setText(clock_text);
 }
 
@@ -208,21 +208,18 @@ void homescreen :: showmood_moodtracker(){
     int offset = noofrows - 7;
 
     int happy,sad,calm,angry;
-    qDebug() << noofrows << offset;
 
     qry.prepare("select count(*) from (select * from '"+mood_table+"' limit 7 offset :offsetvalue) where mood = 'Happy'");
     qry.bindValue(":offsetvalue", offset);
     qry.exec();
     qry.next();
     happy = qry.value(0).toInt();
-    qDebug() << happy;
 
     qry.prepare("select count(*) from (select * from '"+mood_table+"' limit 7 offset :offsetvalue) where mood = 'Sad'");
     qry.bindValue(":offsetvalue", offset);
     qry.exec();
     qry.next();
     sad = qry.value(0).toInt();
-    qDebug() << sad;
 
     qry.prepare("select count(*) from (select * from '"+mood_table+"' limit 7 offset :offsetvalue) where mood = 'Calm'");
     qry.bindValue(":offsetvalue", offset);
@@ -421,12 +418,12 @@ void homescreen::on_SleepTrackerSubmitButton_clicked()
 
     QDateTime clock = QDateTime::currentDateTime();
     clock = clock.addDays(-1);
-    QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
+    QString clock_text=clock.toString("ddd dd MM yyyy hh mm ss ap");
     current_date = clock.toString("ddMMyyyy");
 
 
     if (hours==NULL) {
-            QMessageBox::information (this,"message","cannot submit empty value");
+            QMessageBox::information (this,"Message","Please enter value to submit.");
     }
 
 
@@ -463,7 +460,7 @@ void homescreen::on_SleepTrackerSubmitButton_clicked()
             qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","You cannot have two nights in a day.",QMessageBox::Ok);
         }
     }
     }
@@ -492,7 +489,7 @@ void homescreen::on_HappyButton_clicked()
     QStringList lastdatelist;
 
     QDateTime clock = QDateTime::currentDateTime();
-    QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
+    QString clock_text=clock.toString("ddd dd MM yyyy hh mm ss ap");
     current_date = clock.toString("ddMMyyyy");
 
     qry.prepare("select count(*) from '"+mood_table+"'");
@@ -518,7 +515,7 @@ void homescreen::on_HappyButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","Cannot enter two moods in a single day.",QMessageBox::Ok);
         }
     }
     else {
@@ -568,7 +565,7 @@ void homescreen::on_CalmButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","Cannot enter two moods in a single day.",QMessageBox::Ok);
         }
     }
     else {
@@ -672,7 +669,7 @@ void homescreen::on_GoalsSubmitButton_clicked()
     QString clock_text=clock.toString("ddd dd MM yyyy h m ss ap");
 
     if (goal.isEmpty()) {
-        QMessageBox::information (this,"message","cannot submit empty value");
+        QMessageBox::information (this,"Message","Please enter value to submit.");
     }
 
     else {
@@ -773,7 +770,7 @@ void homescreen::on_SadButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","Cannot enter two moods in a single day.",QMessageBox::Ok);
         }
     }
     else {
@@ -825,7 +822,7 @@ void homescreen::on_AngryButton_clicked()
         qry2.exec();
         }
         else{
-            QMessageBox::information(this,"Message","cannot enter two values in a single day",QMessageBox::Ok);
+            QMessageBox::information(this,"Message","Cannot enter two moods in a single day.",QMessageBox::Ok);
         }
     }
     else {
