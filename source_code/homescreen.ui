@@ -475,7 +475,7 @@ border-radius: 20px</string>
        <item>
         <widget class="QStackedWidget" name="stackedWidget">
          <property name="currentIndex">
-          <number>1</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="Dashboard">
           <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,1">
@@ -1338,8 +1338,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>293</width>
-                <height>207</height>
+                <width>471</width>
+                <height>307</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,2">
@@ -1550,8 +1550,8 @@ background-color: #FEFAF1;</string>
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>78</width>
-                <height>61</height>
+                <width>105</width>
+                <height>105</height>
                </rect>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout">

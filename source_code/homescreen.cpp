@@ -568,6 +568,7 @@ void homescreen::on_CalmButton_clicked()
         qry3.next();
 
         lastdatelist =  qry3.value(0).toString().split(" ").mid(1,3);
+        last_date = lastdatelist[0] + lastdatelist[1] + lastdatelist[2];
 
         if (current_date != last_date){
         qry2.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
@@ -576,10 +577,12 @@ void homescreen::on_CalmButton_clicked()
         qry2.next();
         qry2.exec();
         }
+
         else{
             QMessageBox::information(this,"Message","Cannot enter two moods in a single day.",QMessageBox::Ok);
         }
     }
+
     else {
         qry1.prepare("INSERT INTO '"+mood_table+"' (date, mood) VALUES (:dates, :mood)");
         qry1.bindValue(":dates", clock_text);
